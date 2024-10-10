@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { DM_Sans, Poppins } from 'next/font/google';
 import "./globals.scss";
 import Navbar from "./components/Navbar";
-import { ClerkProvider } from "@clerk/nextjs";
-import Image from "next/image";
-
 
 const roboto = DM_Sans({
     weight: ['400','500','600','700','800'],
@@ -26,7 +23,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
         <html lang="en">
         <body className={roboto.className}>
           <div className="2xl:py-12 py-9 ease-in duration-300">
@@ -39,6 +35,5 @@ export default function RootLayout({
             </div>
         </body>
         </html>
-    </ClerkProvider>
   );
 }
