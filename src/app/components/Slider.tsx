@@ -58,21 +58,25 @@ const slides = [
 const Slider = () => {
 
   const [current, setCurrent] = useState(1);
+  const [interruptInterval, setInterruptInterval] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent(prev=>(prev === slides.length-1 ? 0 : prev + 1))
-      console.log(current)
-    }, 3000);
-    return () => clearInterval(interval);
-  })
+    if (!interruptInterval) {
+      const interval = setInterval(() => {
+        setCurrent(prev=>(prev === slides.length-1 ? 0 : prev + 1));
+      }, 2000);
+      return () => clearInterval(interval);
+    } else {
+
+    }
+  }, [interruptInterval])
 
   return (
     <>
     <div className='flex flex-col items-center'>
 
-      {/* WRAPPER */}
-      <div className='h-full flex justify-center gap-24 ml-[245vw]'>
+      {/* SLIDER */}
+      <div onMouseOver={() => setInterruptInterval(true)} onMouseOut={() => setInterruptInterval(false)} className='h-full flex justify-center gap-24 ml-[245vw]'>
         {slides.map((slide, index)=> (
         <div className="" key={slide.id}>
           <div className={`relative  w-[43vw] transition-all ease-in-out duration-1000 ${current === index ? "-mt-8" : ""} `} style={{transform: `translateX(-${current*49}vw)`}}>
