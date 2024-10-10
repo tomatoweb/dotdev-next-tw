@@ -1,0 +1,45 @@
+# PHP Pass
+location / {
+
+	proxy_pass http://localhost:3001;
+
+	# Standard Parameter setzen
+	include /etc/nginx/fastcgi_params;
+
+	# Parameter aus Domainkonfiguration weitergeben
+	fastcgi_param	IGNORE_USER_ABORT	1; # Setzt den gleichnamigen Parameter
+	fastcgi_param	PRINT_ERROR			$print_error;
+	fastcgi_param	ENV_PATH			$env_path;
+	fastcgi_param	LOG_PATH			$log_path;
+	fastcgi_param	DATA_PATH			$data_path;
+	fastcgi_param	PDO_PATH			$pdo_path;
+	fastcgi_param	REDIS_PATH			$redis_path;
+	fastcgi_param	APP_PATH			$app_path;
+	fastcgi_param	SERVER_ADMIN		$server_admin;
+	fastcgi_param	DEV_MODE			$dev_mode;
+
+	# App spezifischen Parameter hinzufügen
+	
+	fastcgi_param	SCRIPT_FILENAME		$autoload_php;
+
+	
+
+	# Fix to 405 Not Allowed when using POST serving static
+    error_page 405 = $uri;
+	}
+
+# Blocke direkt favicon.ico
+location /favicon.ico {
+	return 404;
+	}
+
+
+
+
+
+
+
+# Alle Crawler per robots.txt verbieten
+location /robots.txt {
+	return 200 "User-agent: *\nDisallow: /";
+	}

@@ -1,0 +1,35 @@
+@mixin sm {
+    @media(max-width: 738px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media(max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media(max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin laptop-device {
+    @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+        @content;
+    }
+}
+
+@mixin smlg-device {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin large-mobile {
+    @media only screen and (max-width: 575px) {
+        @content;
+    }
+}
