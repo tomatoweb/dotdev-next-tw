@@ -13,8 +13,8 @@ const poppins = Poppins({
   });
 
 export const metadata: Metadata = {
-  title: "DotDev Social Media App",
-  description: "Social media app built with Next.js 15",
+  title: "DotDev Creative Web Agency",
+  description: "Dotdev Web Devlopment Agency App built with Next.js 15 and Tailwind",
 };
 
 export default function RootLayout({

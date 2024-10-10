@@ -69,33 +69,33 @@ const Slider = () => {
 
   return (
     <>
-    <div className=''>
+    <div className='flex flex-col items-center'>
 
       {/* WRAPPER */}
-      <div className='h-full flex justify-center gap-24 ml-[155vw]'>
+      <div className='h-full flex justify-center gap-24 ml-[245vw]'>
         {slides.map((slide, index)=> (
         <div className="" key={slide.id}>
           <div className={`relative  w-[43vw] transition-all ease-in-out duration-1000 ${current === index ? "-mt-8" : ""} `} style={{transform: `translateX(-${current*49}vw)`}}>
             <Image src={slide.img} alt='' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="rounded-3xl object-cover"/>
           </div>
         </div>
-        ))}
-        
-      </div>   
+        ))}        
+      </div>
+      {/* DOTS SELECT */}
+      <div className='flex gap-4 my-10'>
+          {slides.map((slide, index) => (
+          <div className={`w-3 h-3 rounded-full bg-primary bg-opacity-20 cursor-pointer flex items-center justify-center ${
+            current === index ? "scale-150 bg-primary bg-opacity-95" : ""}`}
+            key={slide.id}
+            onClick={()=>setCurrent(index)}
+          >
+            {current === index && <div className='w-[6px] h-[6px] rounded-full bg-gray-600'></div> }
+          </div>
+          ))}
+      </div>
 
     </div>
-    {/* DOTS SELECT */}
-    <div className='absolute left-1/2 bottom-8 flex gap-4'>
-        {slides.map((slide, index) => (
-        <div className={`w-3 h-3 rounded-full ring-1 ring-gray-500 cursor-pointer flex items-center justify-center ${
-          current === index ? "scale-150" : ""}`}
-          key={slide.id}
-          onClick={()=>setCurrent(index)}
-        >
-          {current === index && <div className='w-[6px] h-[6px] rounded-full bg-gray-600'></div> }
-        </div>
-        ))}
-      </div>
+    
     </>
   )
 }
