@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Slider from "./components/Slider"
+import { Button, SvgIcon } from "@mui/material"
 
 const Homepage = () => {
   return (
@@ -14,13 +15,14 @@ const Homepage = () => {
         <h1 className="text-[39px] md:text-[50px] lg:text-[60px] xl:text-[70px] font-[700] tracking-tighter text-dark text-center leading-snug">
           Creative Agency, Corporate and Portfolio 
           <span className="text-rose"> React JS</span>
-          {' '}Template + RTL 
+          <span className="text-tahiti"> Tailwind</span>
+          {' '}Templates 
         </h1>
         <div className="py-9 flex justify-center gap-20 text-sm">
           <div>
             <span className="whitespace-nowrap">
             Demo Website (More Coming)
-            </span>
+            </span>            
             <div className="flex justify-center items-center my-14">
               <div>                
                   <span className="text-[50px] lg:text-[80px] font-semibold text-primary poppins tracking-tighter">5+</span>                

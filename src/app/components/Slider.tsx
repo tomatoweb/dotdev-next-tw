@@ -1,24 +1,16 @@
 "use client";
 
+import { Button, SvgIcon } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const slides = [
-  
-  {
-    id: 6,
-    title: "Spring Sale Collections",
-    description: "Sale! Up to 50% off!",
-    img: "/chat-app-react.png",
-    url: "/",
-    bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
-  },
   {
     id: 1,
     title: "Summer Sale Collections",
     description: "Sale! Up to 50% off!",
     img: "/eshop-next-tw.png",
-    url: "/",
+    url: "http://e-shop.dotdev.be",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
@@ -34,7 +26,7 @@ const slides = [
     title: "Spring Sale Collections",
     description: "Sale! Up to 50% off!",
     img: "/social-react-mui.png",
-    url: "/",
+    url: "http://social.dotdev.be",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
   {
@@ -52,6 +44,14 @@ const slides = [
     img: "/sidebar-next-mui.png",
     url: "/",
     bg: "bg-gradient-to-r from-pink-50 to-blue-50",
+  },
+  {
+    id: 6,
+    title: "Spring Sale Collections",
+    description: "Sale! Up to 50% off!",
+    img: "/chat-app-react.png",
+    url: "/",
+    bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
 ];
 
@@ -74,16 +74,17 @@ const Slider = () => {
   return (
     <>
     <div className='flex flex-col items-center'>
-
       {/* SLIDER */}
-      <div onMouseOver={() => setInterruptInterval(true)} onMouseOut={() => setInterruptInterval(false)} className='h-full flex justify-center gap-24 ml-[245vw]'>
+      <div onMouseEnter={() => setInterruptInterval(true)} onMouseLeave={() => setInterruptInterval(false)} className='h-full flex justify-center gap-24 ml-[245vw]'>
         {slides.map((slide, index)=> (
         <div className="" key={slide.id}>
           <div className={`relative  w-[43vw] transition-all ease-in-out duration-1000 ${current === index ? "-mt-8" : ""} `} style={{transform: `translateX(-${current*49}vw)`}}>
-            <Image src={slide.img} alt='' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="rounded-3xl object-cover"/>
+            <a href={slide.url} target="_blank">
+              <Image src={slide.img} alt='' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="rounded-3xl object-cover"/>
+            </a>
           </div>
         </div>
-        ))}        
+        ))}
       </div>
       {/* DOTS SELECT */}
       <div className='flex gap-4 my-10'>
@@ -99,7 +100,7 @@ const Slider = () => {
       </div>
 
     </div>
-    
+
     </>
   )
 }

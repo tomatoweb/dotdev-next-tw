@@ -1,5 +1,4 @@
 import Link from "next/link"
-import MobileMenu from "./MobileMenu"
 import Image from "next/image"
 
 const Navbar = () => {
@@ -19,7 +18,7 @@ const Navbar = () => {
                   <div className="flex text-gray-700 mainmenu">
                       <li>
                           <Link href="/" className="flex">
-                              Demo
+                              Demo                              
                           </Link>
                       </li>
                       <li>

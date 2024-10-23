@@ -7,9 +7,8 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
+    extend: {
+      colors: {
         'primary': '#5956e9',
         'white': '#ffffff',
         'purple': '#3f3cbb',
@@ -20,10 +19,7 @@ const config: Config = {
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
         'dark': '#292930',
-        'rose': '#c75c6f'
-      },
-    extend: {
-      colors: {
+        'rose': '#c75c6f',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
