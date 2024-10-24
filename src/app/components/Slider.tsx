@@ -7,51 +7,39 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    title: "Summer Sale Collections",
-    description: "Sale! Up to 50% off!",
+    title: "E-shop",
     img: "/eshop-next-tw.png",
     url: "http://e-shop.dotdev.be",
-    bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
     id: 2,
-    title: "Winter Sale Collections",
-    description: "Sale! Up to 50% off!",
+    title: "Immo",
     img: "/immo-react-vite-sass.png",
-    url: "/",
-    bg: "bg-gradient-to-r from-pink-50 to-blue-50",
+    url: "http://immo.dotdev.be",
   },
   {
     id: 3,
-    title: "Spring Sale Collections",
-    description: "Sale! Up to 50% off!",
+    title: "Social",
     img: "/social-react-mui.png",
     url: "http://social.dotdev.be",
-    bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
   {
     id: 4,
-    title: "Summer Sale Collections",
-    description: "Sale! Up to 50% off!",
-    img: "/dotdev-next-tw.png",
-    url: "/",
-    bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
+    title: "Dashboard",
+    img: "/dashboard-next-mui.png",
+    url: "http://dashboard.dotdev.be",
   },
   {
     id: 5,
-    title: "Winter Sale Collections",
-    description: "Sale! Up to 50% off!",
-    img: "/sidebar-next-mui.png",
-    url: "/",
-    bg: "bg-gradient-to-r from-pink-50 to-blue-50",
+    title: "Real Estate with Symfony",
+    img: "/agency-symfony4.png",
+    url: "http://agency.dotdev.be",
   },
   {
     id: 6,
-    title: "Spring Sale Collections",
-    description: "Sale! Up to 50% off!",
-    img: "/chat-app-react.png",
+    title: "Sidebar Next MUI",
+    img: "/sidebar-next-mui.png",
     url: "/",
-    bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
 ];
 
@@ -80,7 +68,7 @@ const Slider = () => {
         <div className="" key={slide.id}>
           <div className={`relative  w-[43vw] transition-all ease-in-out duration-1000 ${current === index ? "-mt-8" : ""} `} style={{transform: `translateX(-${current*49}vw)`}}>
             <a href={slide.url} target="_blank">
-              <Image src={slide.img} alt='' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="rounded-3xl object-cover"/>
+              <Image src={slide.img} alt='' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="rounded-xl object-cover"/>
             </a>
           </div>
         </div>
