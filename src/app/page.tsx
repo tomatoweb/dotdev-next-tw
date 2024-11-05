@@ -11,7 +11,7 @@ const Homepage = () => {
         <Image alt="" src="/bubble-37.png" width={200} height={200} className="bubble2" />
         <Image alt="" src="/bubble-31.png" width={200} height={200} className="bubble3" />
       </div>
-      <div className="py-9 md:py-14 px-1 md:px-20 lg:px-7">
+      <div className="pt-9 md:pt-14 px-1 md:px-20 lg:px-7">
         <h1 className="text-[39px] md:text-[50px] lg:text-[60px] xl:text-[70px] font-[700] tracking-tighter text-dark text-center leading-snug">
           Creative Development, Corporate and Portfolio 
           <span className="text-rose"> React JS</span>
