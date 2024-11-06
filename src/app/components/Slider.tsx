@@ -59,7 +59,8 @@ const Slider = () => {
     }
   }, [interruptInterval])
 
-  const ref = useRef(); // We will use React useRef hook to reference the wrapping div:
+  const ref =
+  useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref); // Now we pass the reference to the useDraggable hook:
 
   return (
