@@ -20,6 +20,7 @@ const config: Config = {
         'bermuda': '#78dcca',
         'dark': '#292930',
         'rose': '#c75c6f',
+        'pinky': '#fee6ea',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

@@ -22,7 +22,7 @@ const Homepage = () => {
         <div className="py-9 flex justify-center gap-20 text-sm">
           <div>
             <span className="whitespace-nowrap">
-            Demo Website (More Coming)
+            Demo (More Coming)
             </span>            
             <div className="flex justify-center items-center my-14">
               <div>                

@@ -7,6 +7,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import Navbar from "./components/Navbar";
+import Image from "next/image";
+import Footer from "./components/Footer";
 
 const roboto = DM_Sans({
     weight: ['400','500','600','700','800'],
@@ -35,9 +37,10 @@ export default function RootLayout({
                 <Navbar/>
             </div>
           </div>
-            <div className="bg-gray-50 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent">
+            <div className="bg-gray-50 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
                 {children}
-            </div>
+            </div>            
+          <Footer/>
         </body>
         </html>
   );
