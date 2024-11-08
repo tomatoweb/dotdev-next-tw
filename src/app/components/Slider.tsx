@@ -13,21 +13,21 @@ const slides = [
   },
   {
     id: 2,
+    title: "Dashboard",
+    img: "/dashboard-next-mui.png",
+    url: "http://dashboard.dotdev.be",
+  },
+  {
+    id: 3,
     title: "Immo",
     img: "/immo-react-vite-sass.png",
     url: "http://immo.dotdev.be",
   },
   {
-    id: 3,
+    id: 4,
     title: "Social",
     img: "/social-react-mui.png",
     url: "http://social.dotdev.be",
-  },
-  {
-    id: 4,
-    title: "Dashboard",
-    img: "/dashboard-next-mui.png",
-    url: "http://dashboard.dotdev.be",
   },
   {
     id: 5,
@@ -37,9 +37,9 @@ const slides = [
   },
   {
     id: 6,
-    title: "Sidebar Next MUI",
-    img: "/sidebar-next-mui.png",
-    url: "/",
+    title: "Docs DotDev nextjs",
+    img: "/dotdev-next-tw-mui.png",
+    url: "http://doc.dotdev.be",
   },
 ];
 
