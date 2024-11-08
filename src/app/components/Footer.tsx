@@ -6,12 +6,12 @@ const Footer = () => {
 
     <div className="bg-[#27272e] relative">
       <div className='max-w-[70%] m-auto'>
-        <div className='flex flex-col md:flex-row justify-evenly gap-10 pt-20 mb-20'>
+        <div className='flex flex-col md:flex-row justify-evenly gap-10 pt-20'>
           <div className='text-white text-[69px] font-[400] tracking-tighter leading-snug'>
-            <div >We have Impressive Features</div>
+            <div >We have Impressive technologies</div>
           </div>
           <div className='text-white text-[25px] font-[600] tracking-tighter text-center leading-snug'>
-            <div >You will love all of the features in our template. 100% guaranteed satisfaction.</div>
+            <div >You will love all of the features in our templates. 100% guaranteed satisfaction.</div>
           </div>
         </div>      
         <div className="grid grid-cols-3 grid-rows-3 gap-12 text-white text-xs md:text-lg">
@@ -50,6 +50,22 @@ const Footer = () => {
             Modern Design
             Abstrak is a modern creative design for Creative, Digital, Corporate agencies, etc. 
             Abstrak is a perfect solution for your digital agency
+          </div>
+          <div className='text-center flex flex-col justify-center items-center'>
+            <Image alt='' className="mb-3" src={"/php.png"} width={55} height={55} />
+            PHP powers some of the most successful websites on the internet today. 
+            Developers use this server-side scripting language to create dynamic and scalable websites
+            
+          </div>
+          <div className='text-center flex flex-col justify-center items-center'>
+            <Image alt='' className="mb-3" src={"/symfony.svg"} width={55} height={55} />
+            Symfony Framework
+            The leading PHP framework to create websites and web applications. Built on top of the Symfony Components
+          </div>
+          <div className='text-center flex flex-col justify-center items-center'>
+            <Image alt='' className="mb-3" src={"/laravel.svg"} width={45} height={45} />
+            Laravel the PHP Framework for Web Artisans
+            Laravel is a web application framework with expressive, elegant syntax
           </div>
         </div>  
       </div>

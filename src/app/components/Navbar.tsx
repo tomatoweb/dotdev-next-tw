@@ -17,29 +17,29 @@ const Navbar = () => {
                   {/* LINKS */}
                   <div className="flex text-gray-700 mainmenu">
                       <li>
-                          <Link href="/" className="flex">
+                          <a href="/" target="_blank" className="flex">
                               Demo                              
-                          </Link>
+                          </a>
                       </li>
                       <li>
-                          <Link href="/" className="flex">
+                          <a href="/" target="_blank" className="flex">
                               <span>Features</span>
-                          </Link>
+                          </a>
                       </li>
                       <li>
-                          <Link href="/" className="flex">
+                          <a href="/" target="_blank" className="flex">
                               <span>Why Us</span>
-                          </Link>
+                          </a>
                       </li>
                       <li>
-                          <Link href="/" className="flex">
+                          <a href="http://doc.dotdev.be" target="_blank" className="flex">
                               <span>Documentation</span>
-                          </Link>
+                          </a>
                       </li>
                       <li>
-                          <Link href="/" className="flex">
-                              <span>Support Ticket</span>
-                          </Link>
+                          <a href="/" target="_blank" className="flex">
+                              <span>Support</span>
+                          </a>
                       </li>
                   </div>
               </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className="">
                 
                         <Link href="/" className="flex axil-btn btn-fill-primary w-32 h-14 justify-center">
-                            Buy Now
+                            Explore
                         </Link>
                     
                 {/* <MobileMenu/> */}
