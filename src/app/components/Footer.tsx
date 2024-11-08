@@ -14,7 +14,7 @@ const Footer = () => {
             <div >You will love all of the features in our template. 100% guaranteed satisfaction.</div>
           </div>
         </div>      
-        <div className="grid grid-cols-3 grid-rows-3 gap-12 text-white text-xs md:text-base">
+        <div className="grid grid-cols-3 grid-rows-3 gap-12 text-white text-xs md:text-lg">
           <div className='text-center flex flex-col justify-center items-center'>      
             <Image alt='' className="mb-3" src={"/react.png"} width={50} height={50} />
             Powered by React
