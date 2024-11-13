@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
+import Github from '../svg/Github'
+import Nextjs from '../svg/Nextjs'
 
 const Footer = () => {
   return (
@@ -16,8 +18,13 @@ const Footer = () => {
         </div>      
         <div className="grid grid-cols-3 grid-rows-3 gap-12 text-white text-xs md:text-lg">
           <div className='text-center flex flex-col justify-center items-center'>      
-            <Image alt='' className="mb-3" src={"/react.png"} width={50} height={50} />
-            Powered by React
+            <div className='flex'>
+              <div>
+                <Image alt='' className="mb-3" src={"/react.png"} width={50} height={50} />
+              </div>
+              <Nextjs width={77} height={77} className='text-gray-300 ml-4' />
+            </div>
+            Powered by React NextJS
             Our Templates are Perfect for all devices. 
             It is made by React Structure. React JS was designed to provide high performance in mind.
           </div>

@@ -64,7 +64,11 @@ const Slider = () => {
   const { events } = useDraggable(ref); // Now we pass the reference to the useDraggable hook:
 
   return (
-    <div className='flex flex-col items-center mx-10'>
+    <div
+      onMouseEnter={() => setInterruptInterval(true)}
+      onMouseLeave={() => setInterruptInterval(false)}
+      className='flex flex-col items-center mx-10'
+    >
       {/* DOTS SELECT */}
       <div className='flex gap-4 my-16'>
           {slides.map((slide, index) => (
@@ -72,20 +76,17 @@ const Slider = () => {
             current === index ? "scale-150 bg-primary bg-opacity-95" : ""}`}
             key={slide.id}
             onClick={()=>setCurrent(index)}
-          >            
+          >
           </div>
           ))}
       </div>
       {/* SLIDER */}
-      <div 
-        onMouseEnter={() => setInterruptInterval(true)} 
-        onMouseLeave={() => setInterruptInterval(false)} 
-        className='h-full flex justify-center gap-24 ml-[245vw]'
+      <div className='h-full flex justify-center gap-24 ml-[245vw]'
       >
         {slides.map((slide, index)=> (
         <div className="" key={slide.id}>
-          <div 
-            className={`relative w-[43vw] transition-all ease-in-out duration-1000 ${current === index ? "-mt-8" : ""} `} 
+          <div
+            className={`relative w-[43vw] transition-all ease-in-out duration-1000 ${current === index ? "-mt-8" : ""} `}
             style={{transform: `translateX(-${current*49}vw)`}}
           >
             <a href={slide.url} target="_blank">
@@ -103,14 +104,14 @@ const Slider = () => {
         ref={ref} // add reference and events to the wrapping div
       >
         {slides.map((slide, index)=> (
-        <div 
-          key={index} 
-          className="flex-none rounded-lg" 
-          style={{ 
-            backgroundImage: `url(${slide.img})`, 
-            backgroundRepeat: 'no-repeat', 
-            backgroundSize: 'contain', 
-            backgroundPosition: 'center', 
+        <div
+          key={index}
+          className="flex-none rounded-lg"
+          style={{
+            backgroundImage: `url(${slide.img})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
             boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
             width: '40vw',
             paddingTop: '22.9%',
