@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import Github from '../svg/Github'
 import Nextjs from '../svg/Nextjs'
 
 const Footer = () => {

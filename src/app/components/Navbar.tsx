@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import Github from '../svg/Github'
 
 const Navbar = () => {
   return (
@@ -47,8 +48,11 @@ const Navbar = () => {
             {/* RIGHT */}
             <div className="">
                 
-                        <Link href="/" className="flex axil-btn btn-fill-primary w-32 h-14 justify-center">
+                        <Link href="https://github.com/tomatoweb/dotdev-next-tw" target="_blank" className="flex axil-btn btn-fill-primary w-32 h-14 justify-center">
+                        <Github />
+                        <span className="ml-2">
                             Explore
+                        </span>
                         </Link>
                     
                 {/* <MobileMenu/> */}
