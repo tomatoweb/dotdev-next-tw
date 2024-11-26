@@ -9,37 +9,37 @@ const slides = [
     id: 1,
     title: "E-shop",
     img: "/eshop-next-tw.png",
-    url: "http://e-shop.dotdev.be",
+    url: "https://e-shop.dotdev.be",
   },
   {
     id: 2,
     title: "Dashboard",
     img: "/dashboard-next-mui.png",
-    url: "http://dashboard.dotdev.be",
+    url: "https://dashboard.dotdev.be",
   },
   {
     id: 3,
     title: "Immo",
     img: "/immo-react-vite-sass.png",
-    url: "http://immo.dotdev.be",
+    url: "https://immo.dotdev.be",
   },
   {
     id: 4,
     title: "Social",
     img: "/social-react-mui.png",
-    url: "http://social.dotdev.be",
+    url: "https://social.dotdev.be",
   },
   {
     id: 5,
     title: "Real Estate with Symfony",
     img: "/agency-symfony4.png",
-    url: "http://agency.dotdev.be",
+    url: "https://symfony.dotdev.be",
   },
   {
     id: 6,
     title: "Docs DotDev nextjs",
     img: "/dotdev-next-tw-mui.png",
-    url: "http://doc.dotdev.be",
+    url: "https://doc.dotdev.be",
   },
 ];
 
