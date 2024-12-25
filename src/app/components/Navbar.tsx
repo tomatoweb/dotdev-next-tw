@@ -18,28 +18,28 @@ const Navbar = () => {
                   {/* LINKS */}
                   <div className="flex text-gray-700 mainmenu">
                       <li>
-                          <a href="/" target="_blank" className="flex">
-                              Demo                              
+                          <a href="https://dashboard.dotdev.be" target="_blank" className="flex">
+                          <span>Dashboard</span>                              
                           </a>
                       </li>
                       <li>
-                          <a href="/" target="_blank" className="flex">
-                              <span>Features</span>
+                          <a href="https://symfony.dotdev.be" target="_blank" className="flex">
+                              <span>eCommerce</span>
                           </a>
                       </li>
                       <li>
-                          <a href="/" target="_blank" className="flex">
-                              <span>Why Us</span>
+                          <a href="https://social.dotdev.be" target="_blank" className="flex">
+                              <span>Social</span>
                           </a>
                       </li>
                       <li>
-                          <a href="http://doc.dotdev.be" target="_blank" className="flex">
+                          <a href="https://doc.dotdev.be" target="_blank" className="flex">
                               <span>Documentation</span>
                           </a>
                       </li>
                       <li>
-                          <a href="/" target="_blank" className="flex">
-                              <span>Support</span>
+                          <a href="https://e-shop.dotdev.be" target="_blank" className="flex">
+                              <span>eShopping</span>
                           </a>
                       </li>
                   </div>
@@ -48,11 +48,11 @@ const Navbar = () => {
             {/* RIGHT */}
             <div className="">
                 
-                        <Link href="https://github.com/tomatoweb/dotdev-next-tw" target="_blank" className="flex axil-btn btn-fill-primary w-32 h-14 justify-center">
-                        <Github />
-                        <span className="ml-2">
-                            Explore
-                        </span>
+                        <Link href="https://github.com/tomatoweb/dotdev-next-tw" target="_blank" className="flex axil-btn btn-fill-primary h-14 justify-center">
+                          <Github />
+                          <span className="ml-3">
+                              Source code
+                          </span>
                         </Link>
                     
                 {/* <MobileMenu/> */}

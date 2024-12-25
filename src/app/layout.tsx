@@ -20,7 +20,7 @@ const poppins = Poppins({
   });
 
 export const metadata: Metadata = {
-  title: "DotDev Creative Web Agency",
+  title: "DotDev Creative Web Development",
   description: "Dotdev Web Devlopment Agency App built with Next.js 15 and Tailwind",
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
                 <Navbar/>
             </div>
           </div>
-            <div className="bg-gray-50 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
+            <div className="min-h-screen bg-gray-50 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
                 {children}
             </div>            
           <Footer/>

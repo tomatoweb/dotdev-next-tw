@@ -21,7 +21,7 @@ const slides = [
     id: 3,
     title: "Immo",
     img: "/immo-react-vite-sass.png",
-    url: "https://immo.dotdev.be",
+    url: "https://agency.dotdev.be",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const slides = [
   {
     id: 5,
     title: "Real Estate with Symfony",
-    img: "/agency-symfony4.png",
+    img: "/symfony-app.png",
     url: "https://symfony.dotdev.be",
   },
   {
@@ -70,7 +70,7 @@ const Slider = () => {
       className='flex flex-col items-center mx-10'
     >
       {/* DOTS SELECT */}
-      <div className='flex gap-4 my-16'>
+      <div className='flex gap-4 mb-16'>
           {slides.map((slide, index) => (
           <div className={`w-3 h-3 rounded-full bg-primary bg-opacity-20 cursor-pointer flex items-center justify-center ${
             current === index ? "scale-150 bg-primary bg-opacity-95" : ""}`}
