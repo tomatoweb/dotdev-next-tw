@@ -42,6 +42,11 @@ const Navbar = () => {
                               <span>eShopping</span>
                           </a>
                       </li>
+                      <li>
+                          <a href="/Mathias_Appelmans_2025.pdf" target="_blank" className="flex">
+                              <span>CV</span>
+                          </a>
+                      </li>
                   </div>
               </div>
             </div>
