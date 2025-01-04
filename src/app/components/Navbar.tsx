@@ -58,7 +58,7 @@ const Navbar = () => {
                           target="_blank" 
                           className="flex axil-btn btn-fill-primary h-10 justify-center">
                           <span className="text-xl flex">
-                          <Image alt='' className="mt-6" src={"/DoubleChevron.svg"} width={0} height={0} />
+                          <Image alt='' className="mt-4" src={"/DoubleChevron.svg"} width={30} height={30} />
                           </span>
                           <span className="mr-3">
                               Code
