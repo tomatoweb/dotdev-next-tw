@@ -4,10 +4,15 @@
 
 @import "./responsive.scss";
 
+@font-face {
+  font-family: 'geistSans';
+  src: local('geistSans'), url(./fonts/GeistVF.woff) format('woff');
+}
+
 :root {
   --primary-color: #fff;
   --font-size: 14px;
-  --transition: all 0.3s ease-in-out;
+  --transition: all 0.3s ease-in-out;  
 }
 
 .poppins {
@@ -289,37 +294,36 @@
 }
 
 .axil-btn {
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: 500;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
     letter-spacing: -0.04em;
-    padding: 14px 20px 12px 20px;
+    padding-right: 10px;
     opacity: 0.95;
     text-align: center;
     align-items: center;
     transition: all .3s ease-in-out;
     position: relative;
-    z-index: 1;
+    z-index: 1;    
     &.btn-borderd {
         border: grey;
         color: var(--color-dark);
         background-color: transparent;
         &:hover {
-            background-color: #2522ba;
+            background-color: #105823;
             color: white;
             border-color: blue;
         }
     }
     &.btn-fill-primary {
-        background-color: #5956e9;
+        background-color: #238636;
         color: white;
-        border: 1px solid #5956e9;
-        overflow: hidden;
+        overflow: hidden;        
         &::after {
             content: "";
             height: 300px;
             width: 300px;
-            background-color: rgb(42, 42, 163);
+            background-color: #2e9a40;
             border-radius: 50%;
             position: absolute;
             top: 50%;
@@ -332,7 +336,7 @@
             &::after {
                 transform: translateY(-50%) translateX(-50%) scale(1);
             }
-        }
+        }        
     }
 }
 

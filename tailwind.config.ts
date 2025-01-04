@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+      },
       colors: {
         'primary': '#5956e9',
         'white': '#ffffff',
@@ -23,10 +27,6 @@ const config: Config = {
         'pinky': '#fee6ea',
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
-      fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
       },
     },
   },

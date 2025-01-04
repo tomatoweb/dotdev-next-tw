@@ -19,7 +19,7 @@ const Navbar = () => {
                   <div className="flex text-gray-700 mainmenu">
                       <li>
                           <a href="https://dashboard.dotdev.be" target="_blank" className="flex">
-                          <span>Dashboard</span>                              
+                          <span className="text-bubble-gum font-">Dashboard</span>                              
                           </a>
                       </li>
                       <li>
@@ -53,11 +53,17 @@ const Navbar = () => {
             {/* RIGHT */}
             <div className="">
                 
-                        <Link href="https://github.com/tomatoweb/dotdev-next-tw" target="_blank" className="flex axil-btn btn-fill-primary h-14 justify-center">
-                          <Github />
-                          <span className="ml-3">
-                              Source code
+                        <Link 
+                          href="https://github.com/tomatoweb/dotdev-next-tw" 
+                          target="_blank" 
+                          className="flex axil-btn btn-fill-primary h-10 justify-center">
+                          <span className="text-xl flex">
+                          <Image alt='' className="mt-6" src={"/DoubleChevron.svg"} width={0} height={0} />
                           </span>
+                          <span className="mr-3">
+                              Code
+                          </span>
+                          <Github />
                         </Link>
                     
                 {/* <MobileMenu/> */}
