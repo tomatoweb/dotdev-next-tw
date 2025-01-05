@@ -16,16 +16,17 @@ const Homepage = () => {
           <div>Creative Web Development</div>
           <div className="text-[29px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-[700] tracking-tighter text-dark text-center leading-snug">Business & Corporate</div>
           <div>
-            <span className="text-rose"> React Next JS</span>
-            <span className="text-tahiti"> Tailwind</span>
-            {' '}
             <span className="text-blue-700">PHP</span>
+            <span className="text-rose"> React</span>
+            <span className="text-tahiti"> Tailwind</span>
+            <span className="text-bubble-gum"> MUI</span>
+            {' '}
           </div>
         </h1>
         <div className="pt-9 flex justify-center gap-20 text-sm">
           <div>
             <span className="whitespace-nowrap">
-            Apps (More Coming)
+            Demo Apps (More Coming)
             </span>            
             <div className="flex justify-center items-center my-14">
               <div>                
@@ -35,7 +36,7 @@ const Homepage = () => {
           </div>
           <div className="text-center">
             <span>
-            Dev Tech
+            Dev Technos
             </span>
             <div className="flex justify-center items-center my-14">
               <div>                
