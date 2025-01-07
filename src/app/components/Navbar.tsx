@@ -3,6 +3,7 @@ import Image from "next/image"
 import Github from '../svg/Github'
 
 const Navbar = () => {
+  
   return (
     <div className="navbar flex justify-between items-center">        
       <div>
@@ -16,33 +17,33 @@ const Navbar = () => {
             {/* LINKS */}
             <div className="flex text-gray-700 mainmenu">
                 <li>
-                    <a href="https://dashboard.dotdev.be" target="_blank" className="flex">
-                    <span className="text-bubble-gum font-">Dashboard</span>                              
+                    <a href="https://symfony.dotdev.be" target="_blank" className="flex">
+                    <button className="w-[110px] leading-normal mt-4">eCommerce with Symfony</button>
                     </a>
                 </li>
                 <li>
-                    <a href="https://symfony.dotdev.be" target="_blank" className="flex">
-                        <span>eCommerce</span>
+                    <a href="https://dashboard.dotdev.be" target="_blank" className="flex">
+                    <button className="w-[110px] leading-normal mt-4">Dashboard with NextJS</button>                              
                     </a>
                 </li>
                 <li>
                     <a href="https://social.dotdev.be" target="_blank" className="flex">
-                        <span>Social</span>
+                    <button className="w-[110px] leading-normal mt-4">Social with ReactJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="https://doc.dotdev.be" target="_blank" className="flex">
-                        <span>Documentation</span>
+                    <button className="w-[110px] leading-normal mt-4">Documentation with NextJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="https://e-shop.dotdev.be" target="_blank" className="flex">
-                        <span>eShopping</span>
+                        <button className="w-[110px] leading-normal mt-4">eShopping with NextJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="/Mathias_Appelmans_2025.pdf" target="_blank" className="flex">
-                        <span>CV</span>
+                    <button className="w-[110px] leading-normal mt-4">Curriculum Vitæ</button>
                     </a>
                 </li>
             </div>
