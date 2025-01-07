@@ -18,32 +18,32 @@ const Navbar = () => {
             <div className="flex text-gray-700 mainmenu">
                 <li>
                     <a href="https://symfony.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-4">eCommerce with Symfony</button>
+                    <button className="w-[110px] leading-normal mt-2">eCommerce with Symfony</button>
                     </a>
                 </li>
                 <li>
                     <a href="https://dashboard.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-4">Dashboard with NextJS</button>                              
+                    <button className="w-[110px] leading-normal mt-2">Dashboard with NextJS</button>                              
                     </a>
                 </li>
                 <li>
                     <a href="https://social.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-4">Social with ReactJS</button>
+                    <button className="w-[110px] leading-normal mt-2">Social with ReactJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="https://doc.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-4">Documentation with NextJS</button>
+                    <button className="w-[110px] leading-normal mt-2">Documentation with NextJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="https://e-shop.dotdev.be" target="_blank" className="flex">
-                        <button className="w-[110px] leading-normal mt-4">eShopping with NextJS</button>
+                        <button className="w-[110px] leading-normal mt-2">eShopping with NextJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="/Mathias_Appelmans_2025.pdf" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-4">Curriculum Vitæ</button>
+                    <button className="w-[110px] leading-normal mt-2">Curriculum Vitæ</button>
                     </a>
                 </li>
             </div>
