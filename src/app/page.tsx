@@ -14,7 +14,7 @@ const Homepage = () => {
       <div className="pt-9 md:pt-14 px-1 md:px-20 lg:px-7">
         <h1 className=" flex flex-col text-[39px] md:text-[50px] lg:text-[60px] xl:text-[70px] font-[700] tracking-tighter text-dark text-center leading-snug">
           <div>Creative Web Development</div>
-          <div className="text-[29px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-[700] tracking-tighter text-dark text-center leading-snug">Business & Corporate</div>
+          <div className="text-[29px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-[700] tracking-tighter text-dark text-center leading-snug">for Business & Corporate</div>
           <div>
             <span className="text-blue-700">PHP</span>
             <span className="text-rose"> React</span>
@@ -22,39 +22,7 @@ const Homepage = () => {
             <span className="text-bubble-gum"> MUI</span>
             {' '}
           </div>
-        </h1>
-        <div className="pt-9 flex justify-center gap-20 text-sm">
-          <div>
-            <span className="whitespace-nowrap">
-            Demo Apps (More Coming)
-            </span>            
-            <div className="flex justify-center items-center my-14">
-              <div>                
-                  <span className="text-[50px] lg:text-[80px] font-semibold text-primary poppins tracking-tighter">6+</span>                
-              </div>
-            </div>
-          </div>
-          <div className="text-center">
-            <span>
-            Dev Technos
-            </span>
-            <div className="flex justify-center items-center my-14">
-              <div>                
-                  <span className="text-[50px] lg:text-[80px] font-semibold text-primary poppins tracking-tighter">20+</span>                
-              </div>
-            </div>
-          </div>
-          <div className="text-center">
-            <span>
-            Docs
-            </span>
-            <div className="flex justify-center items-center my-14">
-              <div>                
-                  <span className="text-[50px] lg:text-[80px] font-semibold text-primary poppins tracking-tighter">30+</span>                
-              </div>
-            </div>
-          </div>                    
-        </div>
+        </h1>        
       </div>
       <Slider />
     </div>

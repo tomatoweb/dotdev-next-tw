@@ -9,7 +9,7 @@ const Navbar = () => {
       <div>
         <div className="flex gap-5 items-center">
             <Image alt="" src="/dotdev-logo.png" width={60} height={60}/>
-            <Link className="text-2xl md:text-3xl font-bold tracking-tighter" href="/">Dotdev</Link>
+            <Link className="hidden xl:flex text-2xl md:text-3xl font-bold tracking-tighter" href="/">Dotdev</Link>
         </div>
       </div>        
       <div>
@@ -18,32 +18,34 @@ const Navbar = () => {
             <div className="flex text-gray-700 mainmenu">
                 <li>
                     <a href="https://symfony.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-2">eCommerce with Symfony</button>
+                      <button className="text-sm w-[80px] leading-normal mt-2">
+                        eCommerce with Symfony
+                      </button>
                     </a>
                 </li>
                 <li>
                     <a href="https://dashboard.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-2">Dashboard with NextJS</button>                              
+                    <button className="text-sm w-[80px] leading-normal mt-2">Dashboard with NextJS</button>                              
                     </a>
                 </li>
                 <li>
                     <a href="https://social.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-2">Social with ReactJS</button>
+                    <button className="text-sm w-[80px] leading-normal mt-2">Social with ReactJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="https://doc.dotdev.be" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-2">Documentation with NextJS</button>
+                    <button className="text-sm w-[80px] leading-normal mt-2">Docs with NextJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="https://e-shop.dotdev.be" target="_blank" className="flex">
-                        <button className="w-[110px] leading-normal mt-2">eShopping with NextJS</button>
+                        <button className="text-sm w-[80px] leading-normal mt-2">eShopping with NextJS</button>
                     </a>
                 </li>
                 <li>
                     <a href="/Mathias_Appelmans_2025.pdf" target="_blank" className="flex">
-                    <button className="w-[110px] leading-normal mt-2">Curriculum Vitæ</button>
+                    <button className="text-sm w-[80px] leading-normal mt-2">Curriculum Vitæ</button>
                     </a>
                 </li>
             </div>
