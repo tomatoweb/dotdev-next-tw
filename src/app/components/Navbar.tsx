@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="flex text-gray-700 mainmenu">
                 <li>
                     <a href="https://symfony.dotdev.be" target="_blank" className="flex">
-                      <button className="text-sm w-[80px] leading-normal mt-2">
+                      <button className="text-sm w-[100px] leading-normal mt-2">
                         eCommerce with Symfony
                       </button>
                     </a>
