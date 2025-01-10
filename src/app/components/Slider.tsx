@@ -71,7 +71,7 @@ const Slider = () => {
         className='flex flex-col items-center mx-10'
       >
         {/* DOTS SELECT */}
-        <div className='flex gap-4 mb-16'>
+        <div className='flex gap-4 mt-10 mb-16'>
             {slides.map((slide, index) => (
             <div className={`w-3 h-3 rounded-full bg-primary bg-opacity-20 cursor-pointer flex items-center justify-center ${
               current === index ? "scale-150 bg-primary bg-opacity-95" : ""}`}
@@ -103,7 +103,7 @@ const Slider = () => {
       {/* DRAGGABLE */}
       <nav
         style={{ backgroundImage: `url(${"/line-4.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}
-        className="flex space-x-6 pb-16 pt-10 md:pt-48 overflow-x-scroll scrollbar-hide mb-36 mt-16"
+        className="flex space-x-6 pb-16 pt-10 md:pt-48 overflow-x-scroll scrollbar-hide my-36"
         {...events}
         ref={ref} // add reference and events to the wrapping div
       >
