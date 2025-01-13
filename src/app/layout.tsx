@@ -37,7 +37,7 @@ export default function RootLayout({
                 <Navbar/>
             </div>
           </div>
-            <div className="min-h-screen bg-gray-50 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
+            <div className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
                 {children}
             </div>            
           <Footer/>

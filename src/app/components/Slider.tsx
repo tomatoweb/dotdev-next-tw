@@ -1,49 +1,54 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
+import Products from "./Products";
+import Nextjs from "../svg/Nextjs";
 
 const slides = [
   {
     id: 1,
-    title: "E-shop",
+    title: "E-shop with Symfony",
+    img: "/symfony-app.png",
+    url: "https://symfony.dotdev.be",
+    icon: "/symfony.svg",
+  },
+  {
+    id: 2,
+    title: "E-shop with Nextjs",
     img: "/eshop-next-tw.png",
     url: "https://e-shop.dotdev.be",
   },
   {
-    id: 2,
-    title: "Dashboard",
+    id: 3,
+    title: "Dashboard with Nextjs",
     img: "/dashboard-next-mui.png",
     url: "https://dashboard.dotdev.be",
   },
   {
-    id: 3,
-    title: "Immo",
+    id: 4,
+    title: "Immo with Native React",
     img: "/immo-react-vite-sass.png",
     url: "https://agency.dotdev.be",
-  },
-  {
-    id: 4,
-    title: "Social",
-    img: "/social-react-mui.png",
-    url: "https://social.dotdev.be",
+    icon: "/react.png",
   },
   {
     id: 5,
-    title: "Real Estate with Symfony",
-    img: "/symfony-app.png",
-    url: "https://symfony.dotdev.be",
-  },
-  {
-    id: 6,
-    title: "Docs DotDev nextjs",
+    title: "Development Documentation with Nextjs",
     img: "/dotdev-next-tw-mui.png",
     url: "https://doc.dotdev.be",
   },
+  {
+    id: 6,
+    title: "Social with Native React",
+    img: "/social-react-mui.png",
+    url: "https://social.dotdev.be",
+    icon: "/react.png",
+  },
 ];
 
-const Slider = () => {
+const Slider = ({children}: {children: React.ReactNode}) => {
 
   const [current, setCurrent] = useState(1);
   const [interruptInterval, setInterruptInterval] = useState(false);
@@ -100,10 +105,39 @@ const Slider = () => {
         </div>
       </div>
 
+      {/* CARDS */}
+      <div className="grid grid-cols-2 gap-8 p-4 rounded-lg mt-40">        
+        {slides.map((slide, index)=> (              
+          <div key={index} className="rounded-xl bg-gray-800 h-[35rem]">
+            <a href={slide.url} target="_blank">
+              <Image src={slide.img} alt='' width={0} height={0} sizes="50w" style={{ width: '100%', height: 'auto' }} className="rounded-t-lg"/>
+            </a>
+            <div className="p-5">
+              <a href="#">
+                <h5 className="flex mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {slide.icon ? 
+                    <Image alt='' className="mb-3 mr-4" src={slide.icon} width={55} height={55} /> :
+                    <Nextjs width={77} height={77} className='text-gray-300 ml-4' /> 
+                  }
+                  <span>{slide.title}</span>
+                </h5>
+              </a>
+              <p className="my-6 font-normal text-gray-700 dark:text-gray-400">{slide.title}</p>
+              <a href={slide.url} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+              </a>
+            </div>
+          </div>   
+        ))}
+      </div>
+
       {/* DRAGGABLE */}
       <nav
         style={{ backgroundImage: `url(${"/line-4.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}
-        className="flex space-x-6 pb-16 pt-10 md:pt-48 overflow-x-scroll scrollbar-hide my-36"
+        className="flex space-x-6 pb-16 pt-10 md:pt-48 overflow-x-scroll scrollbar-hide my-20"
         {...events}
         ref={ref} // add reference and events to the wrapping div
       >
@@ -125,7 +159,6 @@ const Slider = () => {
           >
           </div>        
         ))}
-
         </div>
       </nav>
     </>

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Slider from "./components/Slider"
 import { Button, SvgIcon } from "@mui/material"
+import Products from "./components/Products"
 
 const Homepage = () => {
   return (
@@ -24,7 +25,9 @@ const Homepage = () => {
           </div>
         </h1>        
       </div>
-      <Slider />
+      <Slider>
+          <Products/>
+      </Slider>
     </div>
   )
 }
