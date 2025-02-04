@@ -15,7 +15,7 @@ export default async function PostsPage() {
       <ul className="border-t border-b border-primary py-5 leading-8 ">
         {posts.map( (post) => (
           <li key={post.id} className="flex items-center justify-center px-5">              
-            {post.name}              
+            {post.name} - {post.category_id}       
           </li>
         ) )}
       </ul>      
