@@ -45,7 +45,7 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="https://symfony.dotdev.be" target="_blank" className="flex">
+                    <a href="https://laravel.dotdev.be" target="_blank" className="flex">
                       <button className="text-sm w-[100px] leading-normal mt-2">
                         eCommerce with Laravel
                       </button>
