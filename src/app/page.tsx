@@ -14,7 +14,7 @@ const Homepage = () => {
       </div>
       <div className="md:pt-10px-1 md:px-20 lg:px-7">
         <h1 className=" flex flex-col text-[39px] md:text-[50px] lg:text-[60px] xl:text-[70px] font-[700] tracking-tighter text-dark text-center leading-snug">
-          <div>Creative Web Development</div>
+          <div>Creative Web Developer</div>
           <div className="text-[29px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-[700] tracking-tighter text-dark text-center leading-snug">for Business & Corporate</div>
           <div>
             <span className="text-blue-700">PHP</span>

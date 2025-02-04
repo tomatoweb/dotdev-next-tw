@@ -7,9 +7,10 @@ const Navbar = () => {
   return (
     <div className="navbar flex justify-between items-center">        
       <div>
-        <div className="flex gap-5 items-center">
-            <Image alt="" src="/dotdev-logo.png" width={60} height={60}/>
-            <Link className="hidden xl:flex text-2xl md:text-3xl font-bold tracking-tighter" href="/">Dotdev</Link>
+        <div className="flex items-center">
+            <Link className="xl:flex text-2xl md:text-3xl font-bold tracking-tighter" href="/">
+              <Image alt="" src="/mathias.png" width={100} height={100}/>
+            </Link>
         </div>
       </div>        
       <div>
@@ -41,6 +42,13 @@ const Navbar = () => {
                 <li>
                     <a href="https://e-shop.dotdev.be" target="_blank" className="flex">
                         <button className="text-sm w-[80px] leading-normal mt-2">eShopping with NextJS</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://symfony.dotdev.be" target="_blank" className="flex">
+                      <button className="text-sm w-[100px] leading-normal mt-2">
+                        eCommerce with Laravel
+                      </button>
                     </a>
                 </li>
                 <li>
