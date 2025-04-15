@@ -5,6 +5,8 @@ import getConfig from 'next/config';
 
 const { publicRuntimeConfig } = getConfig();
 
+const date = new Date();
+
 const Footer = () => {
     return (
 
@@ -76,6 +78,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className='mt-12 p-4 bg-gray-800 text-gray-500 text-center '> Made with 💓 and Next.js in {date.getFullYear()} by DotDev bv.</div>
             <div className="absolute top-10 right-0">
                 <Image alt="" src={"/circle-1.png"} width={0} height={0} sizes="100vw" style={{ width: 'auto', height: '100%' }} />
             </div>
