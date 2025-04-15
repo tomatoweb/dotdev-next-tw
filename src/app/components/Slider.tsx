@@ -108,28 +108,31 @@ const Slider = ({children}: {children: React.ReactNode}) => {
       {/* CARDS */}
       <div className="grid grid-cols-2 gap-8 p-4 rounded-lg mt-40">        
         {slides.map((slide, index)=> (              
-          <div key={index} className="rounded-xl bg-gray-800 h-[35rem]">
+          <div key={index} className="rounded-xl bg-gray-800 h-[27rem]">
+
             <a href={slide.url} target="_blank">
               <Image src={slide.img} alt='' width={0} height={0} sizes="50w" style={{ width: '100%', height: 'auto' }} className="rounded-t-lg"/>
             </a>
-            <div className="p-5">
-              <a href="#">
-                <h5 className="flex mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+
+            <div className="p-5 flex justify-between">
+              <a href="#" className="flex">
                   {slide.icon ? 
                     <Image alt='' className="mb-3 mr-4" src={slide.icon} width={55} height={55} /> :
                     <Nextjs width={77} height={77} className='text-gray-300 ml-4' /> 
                   }
+                <h5 className="flex mt-2 ml-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <span>{slide.title}</span>
                 </h5>
               </a>
-              <p className="my-6 font-normal text-gray-700 dark:text-gray-400">{slide.title}</p>
-              <a href={slide.url} target="_blank" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <a href={slide.url} target="_blank" 
+              className="h-12 inline-flex items-center px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Read more
                 <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                 </svg>
               </a>
             </div>
+
           </div>   
         ))}
       </div>
