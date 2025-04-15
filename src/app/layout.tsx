@@ -20,7 +20,7 @@ const poppins = Poppins({
   });
 
 export const metadata: Metadata = {
-  title: "DotDev Creative Web Development",
+  title: "Web Developer",
   description: "Dotdev Web Devlopment Agency App built with Next.js 15 and Tailwind",
 };
 
