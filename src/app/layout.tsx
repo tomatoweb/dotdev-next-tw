@@ -20,8 +20,8 @@ const poppins = Poppins({
   });
 
 export const metadata: Metadata = {
-  title: "Web Developer",
-  description: "Dotdev Web Devlopment Agency App built with Next.js 15 and Tailwind",
+  title: "Mathias Appelmans",
+  description: "Mathias Appelmans developer développeur Web PHP",
 };
 
 export default function RootLayout({
