@@ -20,7 +20,7 @@ const poppins = Poppins({
   });
 
 export const metadata: Metadata = {
-  title: "Mathias Appelmans",
+  title: "Mathias Appelmans mathiasappelmans.be",
   description: "Mathias Appelmans developer développeur Web PHP",
 };
 
