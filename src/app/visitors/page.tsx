@@ -7,6 +7,7 @@ export default async function Visitors() {
     //const data = JSON.parse(file);
     return (
         <div>
+            <p>{process.cwd()}</p>
             {lines.map((line) => (
                 <p key={line} className='text-md'>{line}</p>
             ))}
