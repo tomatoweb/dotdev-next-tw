@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server"
 
-const date = new Date();
-
 export async function GET() {
 
     return NextResponse.json({
@@ -15,6 +13,8 @@ export async function GET() {
 export async function POST(req: Request) {
 
     const body = await req.json()
+
+    const date = new Date();
 
     let visitDate = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes()
 
