@@ -8,7 +8,7 @@ export default async function Visitors() {
     return (
         <div>
             {lines.map((line) => (
-                <p className='text-md'>{line}</p>
+                <p key={line} className='text-md'>{line}</p>
             ))}
           
         </div>
