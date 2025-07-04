@@ -10,7 +10,7 @@ export default async function Visitors() {
     return (
         <div>
             <p>{process.cwd()}</p>
-            {lines.map((line) => (
+            {lines.map((line: any) => (
                 <p key={line} className='text-sm'>{line}</p>
             ))}
           
