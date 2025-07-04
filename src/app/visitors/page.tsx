@@ -1,17 +1,19 @@
-import React from 'react'
-import { promises as fs } from 'fs';
-
 export default async function Visitors() {
-    const file = await fs.readFile(process.cwd() + '/programming.txt', 'utf8');
-    const lines = file.split('\n')
-    //const data = JSON.parse(file);
+
+    const response = await fetch(process.env.URL + '/api/visitors/', { cache: "no-store" })
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const res = await response.json();
+    const lines = res.data
+
     return (
         <div>
             <p>{process.cwd()}</p>
             {lines.map((line) => (
-                <p key={line} className='text-md'>{line}</p>
+                <p key={line} className='text-sm'>{line}</p>
             ))}
           
         </div>
       );
-  }
+}
