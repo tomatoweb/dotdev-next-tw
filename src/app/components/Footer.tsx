@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="bg-[#27272e] relative">
             <div className='max-w-[70%] m-auto'>
                 <div className='flex flex-col md:flex-row justify-evenly gap-10 pt-20'>
-                    <div className='text-white text-[69px] font-[400] tracking-tighter leading-snug'>
+                    <div className='text-white text-[50px] font-[400] tracking-tighter leading-snug mb-8'>
                         <div >We use Impressive technologies</div>
                     </div>
                     <div className='text-white text-[25px] font-[600] tracking-tighter text-center leading-snug'>
@@ -24,9 +24,8 @@ const Footer = () => {
                     <div className='text-center flex flex-col justify-center items-center'>
                         <div className='flex'>
                             <div>
-                                <Image alt='' className="mb-3" src={"/react.png"} width={50} height={50} />
+                                <Image alt='' className="mb-3" src={"/react.png"} width={120} height={120} />
                             </div>
-                            <Nextjs width={77} height={77} className='text-gray-300 ml-4' />
                         </div>
                         Powered by React NextJS
                         Our Apps are Perfect for all devices.
@@ -78,7 +77,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-12 p-4 bg-gray-800 text-gray-500 text-center '> Made with 💓 and Next.js in {date.getFullYear()} by DotDev bv.</div>
+            <div className='mt-12 p-4 bg-gray-800 text-gray-500 text-center '> Made with 💓 and Next.js in {date.getFullYear()} by Mathias Appelmans</div>
             <div className="absolute top-10 right-0">
                 <Image alt="" src={"/circle-1.png"} width={0} height={0} sizes="100vw" style={{ width: 'auto', height: '100%' }} />
             </div>
