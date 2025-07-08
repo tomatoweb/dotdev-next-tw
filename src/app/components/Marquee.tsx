@@ -17,7 +17,7 @@ const App: React.FC<AppProps> = ({ play, pauseOnHover }) => (
             <span className="ml-2 text-[#5856e5] text-lg">Mobile Optimized</span>
         </div>
         <div className='flex justify-center items-center ml-2'>
-            <Image alt='' className="" src={"/react.png"} width={110} height={110} />
+            <Image alt='' className="" src={"/react-full.png"} width={110} height={110} />
         </div>
         <div className='flex justify-center items-center mx-2'>
             <Image alt='' className="" src={"/symfony.svg"} width={45} height={45} />

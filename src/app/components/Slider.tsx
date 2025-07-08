@@ -31,7 +31,7 @@ const slides = [
         title: "Immo with Native React",
         img: "/immo-react-vite-sass.png",
         url: "https://agency.dotdev.be",
-        icon: "/react.png",
+        icon: "/react-full.png",
     },
     {
         id: 5,
@@ -44,7 +44,7 @@ const slides = [
         title: "Social with Native React",
         img: "/social-react-mui.png",
         url: "https://social.dotdev.be",
-        icon: "/react.png",
+        icon: "/react-full.png",
     },
 ];
 

@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className='text-center flex flex-col justify-center items-center'>
                         <div className='flex'>
                             <div>
-                                <Image alt='' className="mb-3" src={"/react.png"} width={120} height={120} />
+                                <Image alt='' className="mb-3" src={"/react-full.png"} width={120} height={120} />
                             </div>
                         </div>
                         Powered by React NextJS
