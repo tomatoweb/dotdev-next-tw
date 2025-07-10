@@ -7,6 +7,8 @@ messaginx.txt
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+package-lock.json
+package.json
 
 # testing
 /coverage
