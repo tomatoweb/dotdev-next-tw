@@ -69,7 +69,7 @@ export default function ContactForm() {
             const data = await response.json();
             console.log("Message sent successfully!");
             toast.success("Message sent successfully!");
-            //setIsOpen(false);
+            setIsOpen(false);
         } catch (error) {
             console.error("Error:", error);
             toast.error("Failed to send message. Please try again later.");
