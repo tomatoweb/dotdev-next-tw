@@ -3,8 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
-import Products from "./Products";
-import Nextjs from "../svg/Nextjs";
+import ContactForm from "./ContactForm";
 
 const slides = [
     {
@@ -125,15 +124,18 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
                                 </h5>
                             </a>
                             <a href={slide.url} target="_blank"
-                                className="mx-10 px-3 py-1 text-sm font-medium text-center align-middle text-orange-500  hover:bg-orange-50 ring-2 focus:outline-none ring-orange-500">
-                                <span>SHOW ME !</span>
+                               className="mx-10 px-3 py-1 text-sm font-medium text-center align-middle text-orange-500 hover:bg-orange-50 ring-2 focus:outline-none ring-orange-500">
+                               <span>SHOW ME !</span>
                             </a>                                
                         </div>
 
                     </div>
                 ))}
             </div>
-            <div className="text-center text-xl m-8 font-bold text-green-900 animate-pulse">Find out more... contact me !</div>
+            <div className="flex flex-col justify-center items-center gap-6 text-xl mx-8 mt-8 font-bold text-green-900 animate-pulse">
+                Find out more...                 
+            </div>
+            <ContactForm />
 
             {/* DRAGGABLE */}
             {/* <nav

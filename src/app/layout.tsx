@@ -22,7 +22,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Mathias Appelmans mathiasappelmans.be",
-  description: "Mathias Appelmans developer développeur Web PHP",
+  description: "Mathias Appelmans Web developer React PHP",
 };
 
 export default function RootLayout({

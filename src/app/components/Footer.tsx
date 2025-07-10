@@ -14,7 +14,7 @@ const Footer = () => {
             <div className='max-w-[70%] m-auto'>
                 <div className='flex flex-col md:flex-row justify-evenly gap-10 pt-20'>
                     <div className='text-white text-[50px] font-[400] tracking-tighter leading-snug mb-8'>
-                        <div >We use Impressive technologies</div>
+                        <div >I use Impressive technologies</div>
                     </div>
                     <div className='text-white text-[25px] font-[600] tracking-tighter text-center leading-snug'>
                         <div >Discover all of the amazing features in our self-made Apps and Templates</div>
