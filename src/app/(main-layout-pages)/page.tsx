@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Slider from "./components/Slider"
+import Slider from "@/app/components/Slider"
 import { Button, SvgIcon } from "@mui/material"
-import Products from "./components/Products"
+import Products from "@/app/components/Products"
 
 const Homepage = () => {
     return (

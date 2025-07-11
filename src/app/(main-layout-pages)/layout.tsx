@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { DM_Sans, Poppins } from 'next/font/google';
-import "./globals.scss";
+import "@/app/globals.scss";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Ipinfo from "./components/Ipinfo";
-import Marquee from "./components/Marquee";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Ipinfo from "../components/Ipinfo";
+import Marquee from "../components/Marquee";
 
 const roboto = DM_Sans({
     weight: ['400','500','600','700','800'],
