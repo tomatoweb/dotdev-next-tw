@@ -1,3 +1,4 @@
+'use client'
 // npm i leaflet
 // or https://www.npmjs.com/package/react-leaflet
 // https://leafletjs.com/examples/quick-start/
