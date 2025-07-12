@@ -35,11 +35,10 @@ export default function RootLayout({
         <html lang="en">
             <body className={roboto.className}>
                 <Ipinfo />
-                <Sidebar />
-                <div className="flex min-h-screen">
-                    <main className="wrapper flex-grow">{children}</main>
+                <div className="flex">
+                    <Sidebar />
+                    {children}
                 </div>
-                <Footer />
             </body>
         </html>
     );

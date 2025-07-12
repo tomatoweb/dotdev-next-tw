@@ -11,14 +11,15 @@ const Sidebar = () => {
         <div className="flex">
             {/* Open button */}
             <button
-                className="absolute hover:bg-gray-700 text-white font-bold p-1 mt-6 ml-6 rounded-lg transition-all duration-300"
+                style={{ zIndex: 1000 }}
+                className="absolute right-0 ring-black ring-1 hover:bg-gray-700 text-white font-bold p-1 mt-6 mr-6 rounded-lg transition-all duration-300"
                 onClick={() => setIsOpen(!isOpen)}>
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="gray">
+                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="black">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6H20M4 12H20M4 18H20" />
                 </svg>
             </button>
             {/* Sidebar */}
-            <div className={`bg-gray-800 text-white fixed h-screen transition-all duration-500 z-10 ${isOpen ? 'w-52' : 'w-52 -ml-52'}`}>
+            <div style={{ zIndex: 1000 }} className={`h-96 mt-4 rounded-s-lg bg-gray-700 text-white fixed right-0 transition-all duration-500 z-10 ${isOpen ? 'w-52' : 'w-52 -mr-52 overflow-hidden'}`}>
                 {/* Close button */}
                 <button className="hover:bg-gray-700 text-white font-bold absolute right-0 m-2"
                     onClick={() => setIsOpen(!isOpen)}>

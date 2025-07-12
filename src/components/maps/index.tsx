@@ -7,7 +7,7 @@ const Maps = () => {
   return (
     <div className="w-full">
       <MapContainer
-        className="h-[500px] w-full"
+        className="h-[800px] w-full"
         center={[51.505, -0.09]}
         zoom={13}
         scrollWheelZoom={false}
