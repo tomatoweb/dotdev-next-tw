@@ -1,4 +1,4 @@
-
+'use client'
 // npm i leaflet
 // or https://www.npmjs.com/package/react-leaflet
 // https://leafletjs.com/examples/quick-start/
@@ -12,6 +12,8 @@ import useLocalStorage from "@/app/hooks/useLocalStorage"
 import useGeolocation from "@/app/hooks/useGeolocation"
 
 export default function Map() {
+
+    
 
     // give us a reference to the DOM element of the map
     const mapRef = useRef()
@@ -28,15 +30,14 @@ export default function Map() {
     const location = useGeolocation();
 
     useEffect(() => {
-        
-        mapRef.current.remove();
         mapRef.current = leaflet
             .map('map')
             .setView([userPos.latitude, userPos.longitude], 13); // 13 is the zoom level
 
-        leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        leaflet
+            .tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(mapRef.current);
     }, [])
 
@@ -66,5 +67,5 @@ export default function Map() {
 
     }, [location, userPos.latitude, userPos.longitude]);
 
-    return <div id="map" ref={mapRef}>Map</div>
+    return <div id="map" ref={mapRef}></div>
 }

@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/ip/page.js", "src/app/svg/Symfony.jsx", "src/app/svg/Github.jsx", "src/app/svg/ArrowRight.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/ip/page.js", "src/app/svg/Symfony.jsx", "src/app/svg/Github.jsx", "src/app/svg/ArrowRight.jsx", "src/app/(blank-layout-pages)/map/page.tsx"],
   "exclude": ["node_modules"]
 }
