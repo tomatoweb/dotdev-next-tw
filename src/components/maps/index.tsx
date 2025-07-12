@@ -2,12 +2,12 @@ import L from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 const Maps = () => {
-  const icon = L.icon({ iconUrl: '/images/marker-icon.png' });
+  const icon = L.icon({ iconUrl: '/leaflet/marker-icon.png' });
 
   return (
     <div className="w-full">
       <MapContainer
-        className="h-[300px] w-full"
+        className="h-[500px] w-full"
         center={[51.505, -0.09]}
         zoom={13}
         scrollWheelZoom={false}

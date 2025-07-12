@@ -6,45 +6,41 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Ipinfo from "../components/Ipinfo";
-import Marquee from "../components/Marquee";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import Ipinfo from "@/app/components/Ipinfo";
+import Marquee from "@/app/components/Marquee";
+import Sidebar from "@/app/components/Sidebar";
 
 const roboto = DM_Sans({
-    weight: ['400','500','600','700','800'],
+    weight: ['400', '500', '600', '700', '800'],
     subsets: ['latin'],
-  });
+});
 const poppins = Poppins({
-    weight: ['400','500','600','700','800'],
+    weight: ['400', '500', '600', '700', '800'],
     subsets: ['latin'],
-  });
+});
 
 export const metadata: Metadata = {
-  title: "Mathias Appelmans mathiasappelmans.be",
-  description: "Mathias Appelmans Web developer React PHP",
+    title: "Mathias Appelmans mathiasappelmans.be",
+    description: "Mathias Appelmans Web developer React PHP",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
+    return (
         <html lang="en">
-        <body className={roboto.className}>
-          <div className="2xl:py-12 py-9 ease-in duration-300">
-            <div className="px-4 m-auto xl:max-w-[1240px] 2xl:max-w-[1320px]">
-                <Navbar/>
-                <Ipinfo/>
-                <Marquee play={true} pauseOnHover={true}/>
-            </div>
-          </div>
-            <div className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
-                {children}
-            </div>            
-          <Footer/>
-        </body>
+            <body className={roboto.className}>
+                <Ipinfo />
+                <Sidebar />
+                <div className="flex min-h-screen">
+                    <main className="wrapper flex-grow">{children}</main>
+                </div>
+                <Footer />
+            </body>
         </html>
-  );
+    );
 }
