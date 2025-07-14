@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 
 export default function useGeolocation() {
-  const [position, setPosition] = useState({
+
+  const [userPosition, setUserPosition] = useState({
     latitude: 0,
     longitude: 0,
   });
 
   useEffect(() => {
+
     const geo = navigator.geolocation;
 
     function onSuccess(position) {
-      setPosition({
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
+      setUserPosition({
+        latitude: userPosition.coords.latitude,
+        longitude: userPosition.coords.longitude,
       });
     }
 
@@ -23,7 +25,8 @@ export default function useGeolocation() {
     const watcher = geo.watchPosition(onSuccess, onError);
 
     return () => geo.clearWatch(watcher);
+    
   }, []);
 
-  return position;
+  return userPosition;
 }

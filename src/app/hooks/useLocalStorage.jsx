@@ -1,15 +1,23 @@
-import { useEffect } from "react";
-import { useState } from "react";
+/*
+    Get and set values in user browser localStorage.
+*/
+import { useState, useEffect } from "react";
 
-export default function useLocalStorage(key, initialValue) {
-  const [value, setValue] = useState(() => {
-    const storedValue = localStorage.getItem(key);
-    return storedValue ? JSON.parse(storedValue) : initialValue;
-  });
+export default function useLocalStorage( key, initialValue ) {
 
-  useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
-  }, [key, value]);
+    const [value, setValue] = useState(() => {
 
-  return [value, setValue];
+        // https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage
+        const storedValue = localStorage.getItem(key);
+
+        return storedValue ? JSON.parse(storedValue) : initialValue;
+    });
+
+    useEffect(() => {
+
+        localStorage.setItem(key, JSON.stringify(value));
+
+    }, [key, value]);
+
+    return [value, setValue];
 }

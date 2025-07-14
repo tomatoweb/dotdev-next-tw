@@ -1142,6 +1142,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin-left: -12px;
 	border-right-color: #fff;
 	}
+.markerRed {
+    filter: hue-rotate(120deg);
+}
 
 /* Printing */
 

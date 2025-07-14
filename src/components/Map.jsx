@@ -11,18 +11,16 @@ import leaflet from "leaflet"
 import useLocalStorage from "@/app/hooks/useLocalStorage"
 import useGeolocation from "@/app/hooks/useGeolocation"
 
-export default function Map() {
+export default function Map() {    
 
-    
-
-    // give us a reference to the DOM element of the map
+    // A reference to the DOM element of the map
     const mapRef = useRef()
 
-    // give us a reference to the user marker (a pin on the map)
+    // A reference to the user location marker/pin on the map
     const userMarkerRef = useRef();
 
-    // useLocalStorage hook to get the user's position (navigator.geolocation)
-    const [userPos, setUserPos] = useLocalStorage("USER_MARKER", {
+    // Custom Hook: Get/set the user position from/to user browser application/localStorage
+    const [userPosition, setUserPosition] = useLocalStorage("USER_MARKER", {
         latitude: 0,
         longitude: 0,
     });
@@ -32,7 +30,7 @@ export default function Map() {
     useEffect(() => {
         mapRef.current = leaflet
             .map('map')
-            .setView([userPos.latitude, userPos.longitude], 13); // 13 is the zoom level
+            .setView([userPosition.latitude, userPosition.longitude], 13); // 13 is the zoom level
 
         leaflet
             .tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -44,7 +42,7 @@ export default function Map() {
     // if the user position changes, we update the marker on the map
     useEffect(() => {
 
-        setUserPos({ ...userPos });
+        setUserPosition({ ...userPosition });
 
         // if the userMarkerRef already exists, we remove it from the map
         // to avoid adding multiple markers on the map
@@ -65,7 +63,7 @@ export default function Map() {
         // set the view of the map to the user's position
         mapRef.current.setView([location.latitude, location.longitude], 13);
 
-    }, [location, userPos.latitude, userPos.longitude]);
+    }, [location, userPosition.latitude, userPosition.longitude]);
 
     return <div id="map" ref={mapRef}></div>
 }

@@ -31,7 +31,7 @@ const Sidebar = () => {
                 <div className="flex flex-col pl-10">
                     <div className="mt-12">
                         <a href="#" className="text-white hover:text-gray-300">
-                            Add a user
+                            Add a marker
                         </a>
                     </div>
                     <div className="mt-4">
