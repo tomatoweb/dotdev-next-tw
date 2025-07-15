@@ -17,3 +17,8 @@ export async function createPost(formData: FormData) {
 
   revalidatePath('/posts');
 }
+
+export async function geomarkers() {
+  await prisma.geomarker.findMany();
+  revalidatePath('/posts');
+}

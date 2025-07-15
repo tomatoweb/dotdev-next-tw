@@ -1,19 +1,18 @@
-import {iconBlue, iconGreen, iconPurple, iconRed} from "./constants";
 
 const data = [
     {
       position: [50.88045, 4.55978],
-      icon: iconPurple(),
+      icon: "iconPurple",
       text: 'purple location'
     },
     {
       position: [50.87045, 4.5478],
-      icon: iconGreen(),
+      icon: "iconGreen",
       text: 'green location'
     },
     {
       position: [50.87045, 4.5298],
-      icon: iconRed(),
+      icon: "iconRed",
       text: 'red location'
     }
   ]

@@ -37,3 +37,9 @@ model App {
   url String
   price Int
 }
+model Geomarker {
+  id        Int     @id @default(autoincrement())
+  position  String
+  icon      String?
+  text      String?
+}
