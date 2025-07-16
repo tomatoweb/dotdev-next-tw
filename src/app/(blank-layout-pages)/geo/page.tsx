@@ -22,7 +22,7 @@ const Home: NextPage = () => {
     });
 
     return (
-        <div className="mt-1 mx-auto flex w-full justify-center gap-8 text-center">
+        <div className="w-full h-[100vh]">
             <NotSSRMap />
         </div>
     );

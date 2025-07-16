@@ -631,7 +631,7 @@ nav {
 .leaflet-top,
 .leaflet-bottom {
 	position: absolute;
-	z-index: 1000;
+	z-index: 10;
 	pointer-events: none;
 	}
 .leaflet-top {
@@ -1144,6 +1144,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	}
 .markerRed {
     filter: hue-rotate(120deg);
+}
+.edit-location-button {
+    position: absolute;
+    top: 60px;
+    right: 60px;
 }
 
 /* Printing */

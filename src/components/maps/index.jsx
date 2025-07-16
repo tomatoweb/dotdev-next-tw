@@ -12,114 +12,152 @@ because a client component is pre-rendered on the server at least once, and Leaf
 import L from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
 import { useState, useEffect, useRef } from 'react';
-import data from "./data";
 
 const Map = () => {
-    
-    const [mapChanged, setMapChanged] = useState(false);
 
-    // Add a new marker
-    function AddMarker() {
-        const map = useMapEvents({
-            click: (location) => {
-                console.log('map clicked', location.latlng)
-                fetch('/api/geo', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: location.latlng ? JSON.stringify({
-                        position: JSON.stringify(location.latlng),
-                        text: "New Marker",
-                        icon: "iconBlue" // default icon
-                    }) : JSON.stringify({ 
-                        position: JSON.stringify([0, 0]), 
-                        text: "New Marker", 
-                        icon: "iconBlue" 
-                    })
-                });
-                setMapChanged(!mapChanged); // trigger re-render
+  const iconBlue = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon.png", shadowUrl: "/leaflet/marker-shadow.png" });
+  const iconGreen = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon-green.png", shadowUrl: "/leaflet/marker-shadow.png" });
+  const iconPurple = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon-purple.png", shadowUrl: "/leaflet/marker-shadow.png" });
+  const iconRed = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon-red.png", shadowUrl: "/leaflet/marker-shadow.png" });
+
+  const defaultPos = [50.8821504, 4.538368]; // Kortenberg, Belgium
+
+  function AddMarker() {
+
+    const [coord, setPosition] = useState([]);
+
+    useMapEvents({
+      click: (e) => {
+        setPosition([...coord, e.latlng]); // add 
+        /* fetch('/api/geo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
             },
-            // locate the user on map load
-            locationfound: (location) => {
-                //console.log('location found:', location.latlng)
-                
-            },
-        })
-        return null
-    }
+            body: JSON.stringify({
+                position: JSON.stringify(e.latlng),
+                text: "New Marker", // todo: make it dynamic
+                icon: "iconBlue" // default icon
+            })
+        }); */
+      }
+    });
 
-    function LocationMarker() {
-
-        const iconBlue = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon.png", shadowUrl: "/leaflet/marker-shadow.png" });
-        const iconGreen = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon-green.png", shadowUrl: "/leaflet/marker-shadow.png" });
-        const iconPurple = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon-purple.png", shadowUrl: "/leaflet/marker-shadow.png" });
-        const iconRed = L.icon({ iconSize: [25, 41], iconAnchor: [10, 41], popupAnchor: [2, -40], iconUrl: "/leaflet/marker-icon-red.png", shadowUrl: "/leaflet/marker-shadow.png" });
-
-        const [position, setPosition] = useState(null);
-        const [prismaData, setPrismaData] = useState(null);
-
-        const map = useMap();
-
-        useEffect(() => {
-            fetch('/api/geo')
-                .then((res) => res.json())
-                .then((prismaData) => {
-                    setPrismaData(prismaData.data)
-                })
-        }, []);
-
-        useEffect(() => {
-            // with user location
-            /* map.locate().on("locationfound", function (e) {
-                setPosition(e.latlng);
-                map.flyTo(e.latlng, map.getZoom(), { // https://leafletjs.com/reference#pan-options
-                    animate: false,
-                    duration: 2, // in seconds
-                });
-            }); */
-            // without user location
-            setPosition({ lat: 50.8821504, lng: 4.538368 });
-            map.flyTo({ lat: 50.8821504, lng: 4.538368 }, map.getZoom(), { // https://leafletjs.com/reference#pan-options
-                animate: false,
-                duration: 2, // in seconds
-            });
-        }, [map, mapChanged]);
-
-        return position === null ? null : (
-            <>
-                <Marker position={position} icon={iconBlue} draggable={true} autoPan={true} >
-                    <Popup>
-                        You are here
-                    </Popup>
-                </Marker>
-
-                {prismaData && prismaData.map((d, index) => (
-                    <Marker key={index} position={JSON.parse(d.position)} icon={eval(d.icon)} draggable={true} autoPan={true}>
-                        <Popup>
-                            {d.text}
-                        </Popup>
-                    </Marker>
-                ))}
-            </>
-        );
-    }
+    const removeMarker = (pos) => {
+      setPosition((prevCoord) =>
+        prevCoord.filter((coord) => JSON.stringify(coord) !== JSON.stringify(pos))
+      );
+    };
 
     return (
-        <div className="w-full">
-
-            <MapContainer className="h-[800px] w-full" center={[0, 0]} zoom={13} scrollWheelZoom={true}>
-                <AddMarker />
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-
-                <LocationMarker />
-            </MapContainer>
-
-        </div>
+      <div>
+        {coord.map((pos, idx) => (
+          <Marker
+            key={`marker-${idx}`}
+            position={pos}
+            draggable={true}
+            eventHandlers={{
+              click: (e) => {
+                console.log(e.latlng);
+              }
+            }}
+          >
+            <Popup>
+              <button
+                    className="ring-black ring-1 hover:ring-black text-black bg-gray-200 hover:bg-gray-300 p-1 rounded-lg transition-all duration-300"
+                    onClick={
+                      (e) => {
+                        e.stopPropagation();
+                        removeMarker(pos);
+                      }}>
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="black">
+                    <path d="M3 6H21M5 6V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V6M8 6V4C8 2.89543 8.89543 2 10 2H14C15.1046 2 16 2.89543 16 4V6" stroke="#000000"/>
+                    <path d="M14 11V17" stroke="#000000"/>
+                    <path d="M10 11V17" stroke="#000000"/>
+                    </svg>
+                </button>
+            </Popup>
+          </Marker>
+        ))}
+      </div>
     );
+  }
+
+  // Get markers from the database, and add user location marker on the map
+  function Markers() {
+
+    const [userPosition, setPosition] = useState(null);
+    const [markers, setMarkers] = useState([]);
+
+    const map = useMap();
+
+    useEffect(() => {
+      fetch('/api/geo')
+        .then((res) => res.json())
+        .then((data) => {
+          setMarkers(data.data)
+        })
+    }, []);
+
+    useEffect(() => {
+
+      // with user location
+      /* map.locate().on("locationfound", function (e) {
+          setPosition(e.latlng);
+          map.flyTo(e.latlng, map.getZoom(), { // https://leafletjs.com/reference#pan-options
+              animate: false,
+              duration: 2, // in seconds
+          });
+      }); */
+
+      // without user location
+      setPosition(defaultPos);
+      map.flyTo(defaultPos, map.getZoom(), { // https://leafletjs.com/reference#pan-options
+        animate: false,
+        duration: 2, // in seconds
+      });
+
+    }, [map]);
+
+    return userPosition && (
+      <>
+        <Marker position={userPosition} icon={iconBlue} draggable={true} autoPan={true} >
+          <Popup>
+            You are here
+          </Popup>
+        </Marker>
+
+        {markers && markers.map((d, index) => (
+          <Marker key={index} position={JSON.parse(d.position)} icon={eval(d.icon)} draggable={true} autoPan={true}>
+            <Popup>
+              {d.text}
+            </Popup>
+          </Marker>
+        ))}
+      </>
+    );
+  }
+
+  function resetMarkers() {
+    /* fetch('/api/geo', {
+        method: 'DELETE',
+    }).then(() => {
+        setMapChanged(!mapChanged); // trigger re-render
+    }); */
+  }
+
+  return (
+    <div className="">
+      <MapContainer className="h-[100vh]" center={[0, 0]} zoom={13} scrollWheelZoom={true}>
+        <AddMarker />
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Markers />
+      </MapContainer>
+    </div>
+  );
 };
 
 export default Map;
