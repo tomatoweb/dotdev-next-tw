@@ -7,6 +7,20 @@ const Sidebar = () => {
     
     const [isOpen, setIsOpen] = useState(false);
 
+    const remove = async () => {
+
+        await fetch('/api/geo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                option: "delete"
+            })
+        }); 
+        
+    }
+
     return (
         <div className="flex">
             {/* Open button */}
@@ -38,6 +52,11 @@ const Sidebar = () => {
                         <div className='mt-6'>
                             <a href="#" className="text-white hover:text-gray-300">
                                 Options
+                            </a>
+                        </div>
+                        <div className='mt-6'>
+                            <a onClick={() => {remove()}} href="#" className="text-white hover:text-gray-300">
+                                Clear 
                             </a>
                         </div>
                     </div>
