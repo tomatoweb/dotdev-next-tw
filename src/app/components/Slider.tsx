@@ -124,7 +124,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
                                 </h5>
                             </a>
                             <a href={slide.url} target="_blank"
-                               className="mx-10 px-3 py-1 text-sm font-medium text-center align-middle text-orange-500 hover:bg-orange-50 ring-2 focus:outline-none ring-orange-500">
+                               className="mx-10 px-3 py-1 text-sm font-medium text-center align-middle text-orange-500 hover:bg-orange-50 rounded focus:outline- border border-orange-500">
                                <span>SHOW ME !</span>
                             </a>                                
                         </div>
