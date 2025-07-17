@@ -18,7 +18,7 @@ const Navbar = () => {
                     {/* LINKS */}
                     <div className="flex gap-4 text-gray-700">
                         <div>
-                            <Link className="flex flex-col" href="https://mathiasappelmans.be/geo" target="_blank">
+                            <Link className="flex flex-col items-center" href="https://mathiasappelmans.be/geo" target="_blank">
                                 <Image className="rounded-2xl hover:scale-125 transition-all duration-300 w-20 lg:w-32 max-h-[5.5rem]" alt="" src="/geo.png" width={100} height={100} />
                                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800">
                                     React Leaflet
@@ -26,7 +26,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link className="flex flex-col" href="https://symfony.dotdev.be" target="_blank">
+                            <Link className="flex flex-col items-center" href="https://symfony.dotdev.be" target="_blank">
                                 <Image className="rounded-2xl hover:scale-125 transition-all duration-300  w-20 lg:w-32  max-h-[5.5rem]" alt="" src="/symfony-app-small.png" width={100} height={0} />
                                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800">
                                 eShop Symfony
@@ -34,7 +34,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link className="flex flex-col" href="https://social.dotdev.be" target="_blank">
+                            <Link className="flex flex-col items-center" href="https://social.dotdev.be" target="_blank">
                                 <Image className="rounded-2xl hover:scale-125 transition-all duration-300  w-20 lg:w-32  max-h-[5.5rem]" alt="" src="/social-react-small.png" width={100} height={0} />
                                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800">
                                 Social React
@@ -42,7 +42,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link className="flex flex-col" href="https://dashboard.dotdev.be" target="_blank">
+                            <Link className="flex flex-col items-center" href="https://dashboard.dotdev.be" target="_blank">
                                 <Image className="rounded-2xl hover:scale-125 transition-all duration-300  w-20 lg:w-32  max-h-[5.5rem]" alt="" src="/dashboard-next-small.png" width={100} height={0} />
                                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800">
                                 Dashboard Nextjs
@@ -50,7 +50,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link className="flex flex-col" href="https://e-shop.dotdev.be" target="_blank">
+                            <Link className="flex flex-col items-center" href="https://e-shop.dotdev.be" target="_blank">
                                 <Image className="rounded-2xl hover:scale-125 transition-all duration-300  w-20 lg:w-32  max-h-[5.5rem]" alt="" src="/eshop-next-small.png" width={100} height={0} />
                                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800">
                                 eShop React
@@ -58,7 +58,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link className="flex flex-col" href="https://doc.dotdev.be" target="_blank">
+                            <Link className="flex flex-col items-center" href="https://doc.dotdev.be" target="_blank">
                                 <Image className="rounded-2xl hover:scale-125 transition-all duration-300  w-20 lg:w-32  max-h-[5.5rem]" alt="" src="/dotdev-next-small.png" width={100} height={0} />
                                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800">
                                 Admin Nextjs
@@ -66,7 +66,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div>
-                            <Link className="flex flex-col" href="https://laravel.dotdev.be" target="_blank">
+                            <Link className="flex flex-col items-center" href="https://laravel.dotdev.be" target="_blank">
                                 <Image className="rounded-2xl hover:scale-125 transition-all duration-300  w-20 lg:w-32  max-h-[5.5rem]" alt="" src="/eshop-laravel-small.png" width={100} height={0} />
                                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800">
                                 eShop Laravel
