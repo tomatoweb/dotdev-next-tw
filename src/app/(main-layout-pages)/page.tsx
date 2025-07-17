@@ -15,9 +15,9 @@ const Homepage = () => {
             </div>
             <div className="md:pt-10px-1 md:px-20 lg:px-7">
                 <h1 className=" flex flex-col text-[39px] md:text-[50px] lg:text-[60px] xl:text-[70px] font-[700] tracking-tighter text-dark text-center leading-snug">
-                    <div>Looking for a Web Developer ?</div>
+                    <div>Web Developer</div>
                     <div className="text-[19px] md:text-[28px] lg:text-[29px] xl:text-[30px] font-[700] tracking-tighter text-blue-800 text-center leading-snug">
-                    I design, build, manage and optimise your website
+                    I design, build, manage and optimise your app/website
                     </div>
                     <div className="text-[19px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-[700] tracking-tighter text-dark text-center leading-snug">
                     in a professional way, using the best and most modern tools.
