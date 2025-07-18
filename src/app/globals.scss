@@ -332,6 +332,14 @@ body {
     }
 }
 
+.tooltip{
+    visibility: hidden;
+    position: absolute;
+}
+.has-tooltip:hover .tooltip {
+    visibility: visible;
+    z-index: 10000;
+}
 .axil-btn {
     border-radius: 10px;
     font-size: 14px;

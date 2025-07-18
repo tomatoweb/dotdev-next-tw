@@ -4,48 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import ContactForm from "./ContactForm";
-
-const slides = [
-    {
-        id: 1,
-        title: "E-shop with Symfony",
-        img: "/symfony-app.png",
-        url: "https://symfony.dotdev.be",
-        icon: "/symfony.svg",
-    },
-    {
-        id: 2,
-        title: "E-shop with Nextjs",
-        img: "/eshop-next-tw.png",
-        url: "https://e-shop.dotdev.be",
-    },
-    {
-        id: 3,
-        title: "Dashboard with Nextjs",
-        img: "/dashboard-next-mui.png",
-        url: "https://dashboard.dotdev.be",
-    },
-    {
-        id: 4,
-        title: "Immo with Native React",
-        img: "/immo-react-vite-sass.png",
-        url: "https://agency.dotdev.be",
-        icon: "/react-full.png",
-    },
-    {
-        id: 5,
-        title: "Development Documentation with Nextjs",
-        img: "/dotdev-next-tw-mui.png",
-        url: "https://doc.dotdev.be",
-    },
-    {
-        id: 6,
-        title: "Social with Native React",
-        img: "/social-react-mui.png",
-        url: "https://social.dotdev.be",
-        icon: "/react-full.png",
-    },
-];
+import { slides } from "@/lib/slides";
 
 const Slider = ({ children }: { children: React.ReactNode }) => {
 

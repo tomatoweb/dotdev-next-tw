@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
         <html lang="en">
         <body className={roboto.className}>
-          <div className="2xl:py-12 py-9 ease-in duration-300">
+          <div className="2xl:py-12 pt-9 ease-in duration-300">
             <div className="px-4 m-auto xl:max-w-[1240px] 2xl:max-w-[1320px]">
                 <Navbar/>
                 <Ipinfo/>
