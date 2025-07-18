@@ -33,16 +33,16 @@ export const slides = [
     {
         id: 5,
         title: "E-shop with Symfony",
-        img: "/symfony-app.png",
-        imgsmall: "/symfony-app-small.png",
-        url: "https://symfony.dotdev.be",
+        img: "/eshop-next-tw.png",
+        imgsmall: "/eshop-next-small.png",
+        url: "https://e-shop.dotdev.be",
         icon: "/symfony.svg",
     },
     {
         id: 6,
         title: "Documentation Nextjs",
-        img: "/dotdev-next-tw-mui.png",
-        imgsmall: "/dotdev-next-small.png",
+        img: "/doc-next-tw-mui.png",
+        imgsmall: "/doc-next-small.png",
         url: "https://doc.dotdev.be",
     },
     {

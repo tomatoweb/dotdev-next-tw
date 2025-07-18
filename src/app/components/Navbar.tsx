@@ -15,8 +15,8 @@ const Navbar = () => {
             <div className="grid grid-cols-4 md:grid-cols-8 gap-2 lg:gap-6" style={{zIndex: 10}}>
 
             {slides.map((slide) => (
-                <Link key={slide.id} className="flex flex-col items-center" href="{slide.url}" target="_blank">
-                <div className={`h-16 w-16 sm:h-24 sm:w-24 md:h-16 md:w-16 lg:h-24 lg:w-24 bg-[url(`+ slide.imgsmall +`)] bg-cover bg-center bg-no-repeat size-18 rounded-full hover:scale-125 transition-all duration-300 shadow-xl`}></div>
+                <Link key={slide.id} className="flex flex-col items-center" href={slide.url} target="_blank">
+                <div style={{backgroundImage: `url(${slide.imgsmall})`}} className={`h-16 w-16 sm:h-24 sm:w-24 md:h-16 md:w-16 lg:h-24 lg:w-24 bg-cover bg-center bg-no-repeat size-18 rounded-full hover:scale-125 transition-all duration-300 shadow-xl`}></div>
                 <div className="text-sm text-center font-thin tracking-normal w-[100px] leading-normal mt-2 text-blue-800 hidden">
                     slide.title
                 </div>
