@@ -19,6 +19,9 @@ body {
     background: #ecf2f6;
 }
 
+@media (max-width: 300px) {
+}
+
 .poppins {
     font-family: "Poppins", sans-serif;
 }
@@ -339,6 +342,9 @@ body {
 .has-tooltip:hover .tooltip {
     visibility: visible;
     z-index: 10000;
+}
+.rfm-marquee-container{
+    overflow-x: visible !important;
 }
 .axil-btn {
     border-radius: 10px;

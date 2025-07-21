@@ -8,7 +8,7 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ play, pauseOnHover }) => (
-    <Marquee play={play} pauseOnHover={pauseOnHover}>
+    <Marquee play={play} pauseOnHover={pauseOnHover} className="overflow-x-visible">
         <div className='flex justify-center items-center mx-3'>
             <Image alt='' className="" src={"/laravel.png"} width={120} height={120} />
         </div>
