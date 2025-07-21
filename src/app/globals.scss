@@ -19,9 +19,6 @@ body {
     background: #ecf2f6;
 }
 
-@media (max-width: 300px) {
-}
-
 .poppins {
     font-family: "Poppins", sans-serif;
 }
@@ -246,8 +243,8 @@ body {
     }
 
     75% {
-        -webkit-transform: translateX(800px);
-        transform: translateX(800px);
+        -webkit-transform: translateX(70px);
+        transform: translateX(70px);
     }
 
     100% {
