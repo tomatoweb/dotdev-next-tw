@@ -69,30 +69,30 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       {/* CARDS */}
-      <div className="grid lg:grid-cols-3 grid-cols-2 gap-4 p-4 rounded-lg mt-4">
+      <div className="grid lg:grid-cols-3 grid-cols-2 justify-between gap-4 p-4 rounded-lg mt-4">
         {slides.map((slide, index) => (
-          <div key={index} className="rounded-xl bg-gray-100">
+          <div key={index} className="relative flex flex-col items-center rounded-xl border border-slate-300">
 
             <a href={slide.url} target="_blank">
-              <Image src={slide.img} alt='' width={0} height={0} sizes="50w" style={{ width: '100%', height: 'auto' }} className="rounded-t-lg" />
+              <Image src={slide.img} alt='' width={0} height={0} sizes="50w" style={{ width: 'auto', height: 'auto' }} className="rounded-t-lg" />
             </a>
 
-            <div className="p-5 flex flex-col gap-8 justify-between items-center">
+            <div className="p-5 flex flex-col gap-8 justify-between items-center border-t border-slate-300">
               <a href="#" className="flex">
-                <h5 className="flex mt-2 ml-4 text-2xl font-medium tracking-tight text-gray-900">
-                  <span>{slide.title}</span>
+                <h5 className="flex text-lg font-medium tracking-tight text-gray-900 min-h-40">
+                  <span>{slide.description}</span>
                 </h5>
               </a>
-              <a href={slide.url} target="_blank"
-                className="mx-10 px-3 py-1 text-sm font-medium text-center align-middle text-orange-500 hover:bg-orange-50 rounded focus:outline- border border-orange-500">
-                <span>SHOW ME !</span>
-              </a>
             </div>
+              <a href={slide.url} target="_blank"
+                className="absolute bottom-2 mx-10 px-3 py-1 text-sm font-medium text-center align-bottom text-violet-800 hover:bg-violet-100 rounded focus:outline- border border-violet-800">
+                <span>DEMO</span>
+              </a>
 
           </div>
         ))}
       </div>
-      <div className="flex flex-col justify-center items-center gap-6 text-xl mx-8 mt-8 font-bold text-green-900 animate-pulse">
+      <div className="flex flex-col justify-center items-center gap-6 text-xl mx-8 my-8 font-bold text-slate-900 animate-pulse">
         Find out more...
       </div>
       <ContactForm />

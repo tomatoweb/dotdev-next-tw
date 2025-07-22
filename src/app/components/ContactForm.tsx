@@ -84,7 +84,7 @@ export default function ContactForm() {
             <Toaster position="top-right" richColors closeButton={false} />
             <div className="flex justify-center mb-6">
                 <button
-                    className=" hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                    className=" hover:bg-slate-500 text-slate-700 font-semibold hover:text-white py-2 px-4 border border-slate-500 hover:border-transparent rounded"
                     onClick={() => setIsOpen(true)}>
                     Contact Me
                 </button>

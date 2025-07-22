@@ -14,10 +14,10 @@ const Footer = () => {
             <div className='max-w-[70%] m-auto'>
                 <div className='flex flex-col md:flex-row justify-evenly gap-10 pt-20'>
                     <div className='text-white text-[50px] font-[400] tracking-tighter leading-snug mb-8'>
-                        <div >I use Impressive technologies</div>
+                        <div >Modern Impressive technologies</div>
                     </div>
                     <div className='text-white text-[25px] font-[600] tracking-tighter text-center leading-snug'>
-                        <div >Discover all of the amazing features in our self-made Apps and Templates</div>
+                        <div >Discover the amazing features in self-made Apps and Templates</div>
                     </div>
                 </div>
                 <div className="grid grid-cols-3 grid-rows-3 gap-12 text-white text-xs md:text-lg">
@@ -27,8 +27,8 @@ const Footer = () => {
                                 <Image alt='' className="mb-3" src={"/react-full.png"} width={120} height={120} />
                             </div>
                         </div>
-                        Powered by React NextJS
-                        Our Apps are Perfect for all devices.
+                        Powered by React NextJS (SSR)
+                        Perfect for all devices.
                         It is made by React Structure. React JS was designed to provide high performance in mind.
                     </div>
                     <div className='text-center flex flex-col justify-center items-center'>
@@ -38,31 +38,31 @@ const Footer = () => {
                     </div>
                     <div className='text-center flex flex-col justify-center items-center'>
                         <Image alt='' className="mb-3" src={"/responsive.png"} width={50} height={50} />
-                        Responsive: All the pages of our Apps are responsive.
-                        We used the Tailwind, MUI and Bootstrap frameworks to build the website.
+                        Responsive: All the pages of the Apps are responsive.
+                        Used Tailwind, MUI and Bootstrap frameworks to style the apps.
                     </div>
                     <div className='text-center flex flex-col justify-center items-center'>
                         <Image alt='' className="mb-3" src={"/code-2.png"} width={45} height={45} />
                         Reusable Components:
-                        All the Components of our Apps are reusable.
-                        We made Dotdev using functional components. We can reuse any components
+                        All the Components of the Apps are reusable.
+                        Using functional components, can reuse any components
                     </div>
                     <div className='text-center flex flex-col justify-center items-center'>
                         <Image alt='' className="mb-3" src={"/mobile.png"} width={40} height={40} />
                         Mobile Optimized:
-                        All the pages of our Apps are Mobile optimized.
+                        All the pages of the Apps are Mobile optimized.
                         We used the most performant frontend frameworks to build the website
                     </div>
                     <div className='text-center flex flex-col justify-center items-center'>
                         <Image alt='' className="mb-3" src={"/icon-13.png"} width={55} height={55} />
                         Modern Design:
-                        Dotdev is a modern creative design for Creative, Digital, Corporates and small business
-                        Dotdev is a perfect solution for your organisation
+                        Modern creative design for Creative, Digital, Corporates and small business
+                        A perfect solution for your organisation
                     </div>
                     <div className='text-center flex flex-col justify-center items-center'>
                         <Image alt='' className="mb-3" src={"/php.png"} width={55} height={55} />
                         PHP powers some of the most successful websites on the internet today.
-                        Developers use this server-side scripting language to create dynamic and scalable websites
+                        Use this server-side scripting language to create dynamic and scalable websites
 
                     </div>
                     <div className='text-center flex flex-col justify-center items-center'>

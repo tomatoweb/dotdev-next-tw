@@ -6,6 +6,7 @@ export const slides = [
         imgsmall: "/geo.png",
         url: "https://dotdev.be/geo",
         icon: "/symfony.svg",
+        description: "React Leaflet in a Next.js application to visualize geographical data. Functional add/remove markers. Prisma ORM",
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const slides = [
         imgsmall: "/symfony-app-small.png",
         url: "https://symfony.dotdev.be",
         icon: "/symfony.svg",
+        description: "Symfony application with e-commerce solution. Includes product management, cart, and checkout functionalities",
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ export const slides = [
         imgsmall: "/social-react-small.png",
         url: "https://social.dotdev.be",
         icon: "/react-full.png",
+        description: "Native React and MUI Material styled social application",
     },
     {
         id: 4,
@@ -29,6 +32,8 @@ export const slides = [
         img: "/dashboard-next-mui.png",
         imgsmall: "/dashboard-next-small.png",
         url: "https://dashboard.dotdev.be",
+        icon: "/symfony.svg",
+        description: "Next.js application with MUI Material, Tailwind styled dashboard. Includes user management, analytics, and reporting features",
     },
     {
         id: 5,
@@ -37,6 +42,7 @@ export const slides = [
         imgsmall: "/eshop-next-small.png",
         url: "https://e-shop.dotdev.be",
         icon: "/symfony.svg",
+        description: "E-commerce application built with Next.js and Tailwind CSS. Features product listings, cart management, and checkout process",
     },
     {
         id: 6,
@@ -44,6 +50,7 @@ export const slides = [
         img: "/doc-next-tw-mui.png",
         imgsmall: "/doc-next-small.png",
         url: "https://doc.dotdev.be",
+        description: "Next.js application with Tailwind CSS and MUI Material for documentation purposes. Includes search functionality and responsive design",
     },
     {
         id: 7,
@@ -51,6 +58,7 @@ export const slides = [
         img: "/eshop-laravel.png",
         imgsmall: "/eshop-laravel-small.png",
         url: "https://laravel.dotdev.be",
+        description: "Laravel application with e-commerce solution Tailwind styled. Includes product management, cart, and checkout functionalities",
     },
     {
         id: 8,
@@ -59,5 +67,15 @@ export const slides = [
         imgsmall: "/agency-small.png",
         url: "https://agency.dotdev.be",
         icon: "/react-full.png",
+        description: "A React Leaflet application to visualize geographical data. ",
+    },
+    {
+        id: 8,
+        title: "Vue.js PHP",
+        img: "/phishing.png",
+        imgsmall: "/phishing.png",
+        url: "https://dotdev.be",
+        icon: "/phishing.png",
+        description: "Vue.js form with API PHP backend",
     },
 ];
