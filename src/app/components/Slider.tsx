@@ -44,7 +44,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
         </div>
 
         {/* SLIDER */}
-          <div className="flex gap-10 md:gap-[4.5rem] w-[0vw] -ml-[60%] lg:-ml-[33%]" {...events} ref={ref} >
+          <div className="flex gap-10 md:gap-[4.5rem] w-[0vw] -ml-[90%] lg:-ml-[33%]" {...events} ref={ref} >
             {slides.map((slide, index) => (
               <div
                 key={slide.id}
