@@ -42,7 +42,7 @@ export const slides = [
         imgsmall: "/eshop-next-small.png",
         url: "https://e-shop.dotdev.be",
         icon: "/symfony.svg",
-        description: "E-commerce application built with Next.js and Tailwind CSS. Features product listings, cart management, and checkout process",
+        description: "E-commerce application built with Next.js and Tailwind CSS. Features product listings, cart management, and checkout",
     },
     {
         id: 6,
@@ -50,7 +50,7 @@ export const slides = [
         img: "/doc-next-tw-mui.png",
         imgsmall: "/doc-next-small.png",
         url: "https://doc.dotdev.be",
-        description: "Next.js application with Tailwind CSS and MUI Material for documentation purposes. Includes search functionality and responsive design",
+        description: "Next.js application with Tailwind CSS and MUI Material for documentation purposes. Includes search functionality",
     },
     {
         id: 7,
@@ -58,7 +58,7 @@ export const slides = [
         img: "/eshop-laravel.png",
         imgsmall: "/eshop-laravel-small.png",
         url: "https://laravel.dotdev.be",
-        description: "Laravel application with e-commerce solution Tailwind styled. Includes product management, cart, and checkout functionalities",
+        description: "Laravel application with e-commerce solution Tailwind styled. Includes product management, cart, and checkout",
     },
     {
         id: 8,

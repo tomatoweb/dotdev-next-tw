@@ -20,7 +20,7 @@ const Footer = () => {
                         <div >Discover the amazing features in self-made Apps and Templates</div>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 grid-rows-3 gap-12 text-white text-xs md:text-lg">
+                <div className="mt-8 gri grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 text-white text-xs md:text-lg">
                     <div className='text-center flex flex-col justify-center items-center'>
                         <div className='flex'>
                             <div>
@@ -31,46 +31,41 @@ const Footer = () => {
                         Perfect for all devices.
                         It is made by React Structure. React JS was designed to provide high performance in mind.
                     </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
-                        <Image alt='' className="mb-3" src={"/sass.png"} width={48} height={48} />
-                        Sass-SCSS is more stable, powerful, and elegant because it is an extension of CSS.
-                        So, it is easy for designers and developers to work more efficiently and quickly.
-                    </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
+                    <div className='text-center flex flex-col items-center'>
                         <Image alt='' className="mb-3" src={"/responsive.png"} width={50} height={50} />
                         Responsive: All the pages of the Apps are responsive.
                         Used Tailwind, MUI and Bootstrap frameworks to style the apps.
                     </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
+                    <div className='text-center flex flex-col items-center'>
                         <Image alt='' className="mb-3" src={"/code-2.png"} width={45} height={45} />
                         Reusable Components:
                         All the Components of the Apps are reusable.
                         Using functional components, can reuse any components
                     </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
+                    <div className='text-center flex flex-col items-center'>
                         <Image alt='' className="mb-3" src={"/mobile.png"} width={40} height={40} />
                         Mobile Optimized:
                         All the pages of the Apps are Mobile optimized.
                         We used the most performant frontend frameworks to build the website
                     </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
+                    <div className='text-center flex flex-col items-center'>
                         <Image alt='' className="mb-3" src={"/icon-13.png"} width={55} height={55} />
                         Modern Design:
                         Modern creative design for Creative, Digital, Corporates and small business
                         A perfect solution for your organisation
                     </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
+                    <div className='text-center flex flex-col items-center'>
                         <Image alt='' className="mb-3" src={"/php.png"} width={55} height={55} />
                         PHP powers some of the most successful websites on the internet today.
                         Use this server-side scripting language to create dynamic and scalable websites
 
                     </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
+                    <div className='text-center flex flex-col items-center'>
                         <Image alt='' className="mb-3" src={"/symfony.svg"} width={55} height={55} />
                         Symfony Framework:
                         The leading PHP framework to create websites and web applications. Built on top of the Symfony Components
                     </div>
-                    <div className='text-center flex flex-col justify-center items-center'>
+                    <div className='text-center flex flex-col items-center'>
                         <Image alt='' className="mb-3" src={"/laravel.svg"} width={45} height={45} />
                         Laravel the PHP Framework for Web Artisans.
                         Laravel is a web application framework with expressive, elegant syntax
