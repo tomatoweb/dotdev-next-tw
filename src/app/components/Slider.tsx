@@ -79,9 +79,9 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 
             <div className="p-5 flex flex-col gap-8 justify-between items-center border-t border-slate-300">
               <a href="#" className="flex">
-                <h5 className="flex text-sm sm:text-lg lg:text-xl font-medium tracking-tight text-gray-900 min-h-48">
+                <div className="flex text-sm sm:text-xl lg:text-xl font-medium tracking-tight text-gray-900 h-64 md:min-h-48">
                   <span className="">{slide.description}</span>
-                </h5>
+                </div>
               </a>
             </div>
               <a href={slide.url} target="_blank"
