@@ -6,7 +6,7 @@ import Products from "@/app/components/Products"
 const Homepage = () => {
     return (
         <div className=''>
-            <Image alt='' className="absolute top-0 right-0 mt-[-20rem] w-52" src={"/bubble-35.png"} width={250} height={200} />
+            <Image alt='' className="absolute top-0 right-0 mt-[-20rem] w-44 md:w-56" src={"/bubble-35.png"} width={250} height={200} />
             <div className="splash">
                 <Image src="/bubble-36.png" alt="" width={530} height={300} className="bubble36" />
                 <Image alt="" src="/bubble-14.png" width={200} height={200} className="bubble1" />
