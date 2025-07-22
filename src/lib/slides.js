@@ -24,7 +24,7 @@ export const slides = [
         imgsmall: "/social-react-small.png",
         url: "https://social.dotdev.be",
         icon: "/react-full.png",
-        description: "Native React and MUI Material styled social application",
+        description: "Native React and MUI Material styled social application with user profiles, posts, and comments. Includes authentication",
     },
     {
         id: 4,
@@ -67,7 +67,7 @@ export const slides = [
         imgsmall: "/agency-small.png",
         url: "https://agency.dotdev.be",
         icon: "/react-full.png",
-        description: "A React Leaflet application to visualize geographical data. ",
+        description: "A React Leaflet application to visualize geographical data. Functional add/remove markers. Prisma ORM integration",
     },
     {
         id: 8,
@@ -76,6 +76,6 @@ export const slides = [
         imgsmall: "/phishing.png",
         url: "https://dotdev.be",
         icon: "/phishing.png",
-        description: "Vue.js form with API PHP backend",
+        description: "Vue.js form with API PHP backend to handle phishing detection. Includes form validation and API integration",
     },
 ];
