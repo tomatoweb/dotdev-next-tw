@@ -10,33 +10,33 @@ const CookiesBar = () => {
   return (
     <>
       {/* Cookies Params Modal */}
-      { settingsOpened && (
-      <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[51] flex items-center justify-center transition-all duration-300 ${cookiesAccepted ? 'hidden' : 'flex'}`}>
-        <div className='bg-white rounded-lg shadow-lg max-w-md w-full'>
-          <h2 className='text-xl font-bold bg-slate-200 rounded-t-lg p-4' style={{ boxShadow: "inset 0 -1px 0 0 #c9c7c7" }}>Cookies Settings</h2>
-          <p className='p-4'>You can choose which cookies you want to allow:</p>
-          <div className='flex flex-col gap-2 px-4'>
-            <label className='flex items-center'>
-              <input type='checkbox' className='mr-2' />
-              Functional Cookies
-            </label>
-            <label className='flex items-center'>
-              <input type='checkbox' className='mr-2' />
-              Analytical Cookies
-            </label>
-            <label className='flex items-center'>
-              <input type='checkbox' className='mr-2' />
-              Marketing Cookies
-            </label>
+      {settingsOpened && (
+        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[51] flex items-center justify-center transition-all duration-300 ${cookiesAccepted ? 'hidden' : 'flex'}`}>
+          <div className='bg-white rounded-lg shadow-lg max-w-md w-full'>
+            <h2 className='text-xl font-bold bg-slate-200 rounded-t-lg p-4' style={{ boxShadow: "inset 0 -1px 0 0 #c9c7c7" }}>Cookies Settings</h2>
+            <p className='p-4'>You can choose which cookies you want to allow:</p>
+            <div className='flex flex-col gap-2 px-4'>
+              <label className='flex items-center'>
+                <input type='checkbox' className='mr-2' />
+                Functional Cookies
+              </label>
+              <label className='flex items-center'>
+                <input type='checkbox' className='mr-2' />
+                Analytical Cookies
+              </label>
+              <label className='flex items-center'>
+                <input type='checkbox' className='mr-2' />
+                Marketing Cookies
+              </label>
+            </div>
+            <button onClick={() => { setSettingsOpened(!settingsOpened); setCookiesAccepted(!cookiesAccepted) }} className="m-6 bg-black text-white tracking-tighter font-bold pb-3 pt-2 px-4 rounded-full">
+              Save Settings
+            </button>
           </div>
-          <button onClick={() => { setSettingsOpened(!settingsOpened); setCookiesAccepted(!cookiesAccepted) }} className="m-6 bg-black text-white tracking-tighter font-bold pb-3 pt-2 px-4 rounded-full">
-            Save Settings
-          </button>
         </div>
-      </div>
-    )}
+      )}
       {/* Cookies Bar */}
-      <div className={`bg-gray-100 fixed left-5 h-auto z-50 items-center rounded-2xl flex flex-col justify-center text-2xl font-bold cursor-pointer transition-all delay-75 duration-1000 shadow-2xl ${!cookiesAccepted ? 'bottom-20' : '-bottom-[18rem]'}`}>
+      <div className={`bg-gray-100 fixed left-5 h-auto z-50 items-center rounded-2xl flex flex-col justify-center text-2xl font-bold cursor-pointer transition-all delay-75 duration-1000 shadow-[rgba(0,0,15,0.5)_0px_0px_14px_14px] ${!cookiesAccepted ? 'bottom-20' : '-bottom-[19rem]'}`}>
         <div
           className='h-[80px] w-[300px] bg-cover bg-center bg-no-repeat rounded-t-2xl '
           style={{ backgroundImage: `url(/cookies.jpg)` }}
