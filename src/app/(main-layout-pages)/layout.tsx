@@ -9,15 +9,16 @@ import '@fontsource/roboto/700.css';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Ipinfo from "../components/Ipinfo";
+import CookiesBar from "../components/CookiesBar";
 
 const roboto = DM_Sans({
-    weight: ['400','500','600','700','800'],
-    subsets: ['latin'],
-  });
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+});
 const poppins = Poppins({
-    weight: ['400','500','600','700','800'],
-    subsets: ['latin'],
-  });
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: "Mathias Appelmans mathiasappelmans.be",
@@ -30,19 +31,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-        <html lang="en">
-        <body className={roboto.className}>
-          <div className="2xl:py-10 pt-9 ease-in duration-300">
-            <div className="px-4 m-auto xl:max-w-[1240px] 2xl:max-w-[1320px]">
-                <Navbar/>
-                <Ipinfo/>
-            </div>
+    <html lang="en">
+      <body className={roboto.className}>
+        <CookiesBar />
+        <div className="2xl:py-10 pt-9 ease-in duration-300">
+          <div className="px-4 m-auto xl:max-w-[1240px] 2xl:max-w-[1320px]">
+            <Navbar />
+            <Ipinfo />
           </div>
-            <div className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
-                {children}
-            </div>            
-          <Footer/>
-        </body>
-        </html>
+        </div>
+        <div className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
+          {children}
+        </div>
+        <Footer />
+      </body>
+    </html>
   );
 }

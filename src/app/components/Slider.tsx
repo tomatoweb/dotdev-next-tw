@@ -44,31 +44,36 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
         </div>
 
         {/* SLIDER */}
-          <div className="flex gap-10 md:gap-[4.5rem] w-[0vw] -ml-[90%] lg:-ml-[33%]" {...events} ref={ref} >
-            {slides.map((slide, index) => (
-              <div
-                key={slide.id}
-                className={`slide relative transition-all ease-in-out duration-1000 ${current === index ? "-mt-4 lg:-mt-6" : ""} `}
-                style={{ transform: `translateX(-${current * 118}%)` }}
-              >
-                <a href={slide.url} target="_blank" >
-                  <div key={slide.id} className="flex flex-col items-center">
-                    <div style={{backgroundImage: `url(${slide.img})`}} className={`h-32 w-56 sm:h-32 sm:w-56 md:h-32 md:w-56 lg:h-56 lg:w-96 bg-cover bg-center bg-no-repeat size-18 rounded-md hover:scale-125 transition-all duration-300 shadow-xl`}></div>
-                  </div>
-                  {/* <Image src={slide.img} alt='' width={400} height={0} className="rounded-xl object-cover" /> */}
-                </a>
-              </div>
-            ))}
-          </div>
-
+        <div className="flex gap-10 md:gap-[4.5rem] w-[0vw] -ml-[90%] lg:-ml-[33%]" {...events} ref={ref} >
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`slide relative transition-all ease-in-out duration-1000 ${current === index ? "-mt-4 lg:-mt-6" : ""} `}
+              style={{ transform: `translateX(-${current * 118}%)` }}
+            >
+              <a href={slide.url} target="_blank" >
+                <div key={slide.id} className="flex flex-col items-center">
+                  <div style={{ backgroundImage: `url(${slide.img})` }} className={`h-32 w-56 sm:h-32 sm:w-56 md:h-32 md:w-56 lg:h-56 lg:w-96 bg-cover bg-center bg-no-repeat size-18 rounded-md hover:scale-125 transition-all duration-300 shadow-xl`}></div>
+                </div>
+                {/* <Image src={slide.img} alt='' width={400} height={0} className="rounded-xl object-cover" /> */}
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div>
-        <div className="text-3xl font-bold mt-20">Portfolio</div>
-        <div className="text-xl text-blue-900">28+ projects realized</div>
+      {/* MOUSE GO TO NEXT ANIMATION */}
+      <div className="relative my-20">
+        <p className="absolute flex justify-center left-0 right-0">
+          <a href="#portfolio" className="bounce">
+            <Image src="/go-to-next.png" alt="discover" width={30} height={30} />
+          </a>
+        </p>
       </div>
 
       {/* CARDS */}
+      <div className="text-3xl font-bold mt-40" id="portfolio">Portfolio</div>
+      <div className="text-xl text-blue-900">28+ projects realized</div>
       <div className="grid lg:grid-cols-3 grid-cols-2 justify-between gap-4 p-4 rounded-lg mt-4">
         {slides.map((slide, index) => (
           <div key={index} className="relative flex flex-col items-center rounded-xl border border-slate-300">
@@ -84,10 +89,10 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
                 </div>
               </a>
             </div>
-              <a href={slide.url} target="_blank"
-                className="absolute bottom-2 mx-10 px-3 py-1 text-sm font-medium text-center align-bottom text-violet-800 hover:bg-violet-100 rounded focus:outline- border border-violet-800">
-                <span>DEMO</span>
-              </a>
+            <a href={slide.url} target="_blank"
+              className="absolute bottom-2 mx-10 px-3 py-1 text-sm font-medium text-center align-bottom text-violet-800 hover:bg-violet-100 rounded focus:outline- border border-violet-800">
+              <span>DEMO</span>
+            </a>
 
           </div>
         ))}
