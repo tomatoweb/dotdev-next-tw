@@ -1,34 +1,80 @@
 'use client'
 import Cookies from '@/app/svg/Cookies'
 import { useState } from 'react';
+import HighlightOff from '@mui/icons-material/HighlightOff';
+import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { ExpandLess, ExpandMore, StarBorder } from '@mui/icons-material';
 
 const CookiesBar = () => {
 
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
   const [settingsOpened, setSettingsOpened] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+  const handleClick2 = () => {
+    setOpen2(!open2);
+  };
 
   return (
     <>
       {/* Cookies Params Modal */}
       {settingsOpened && (
         <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[51] flex items-center justify-center transition-all duration-300 ${cookiesAccepted ? 'hidden' : 'flex'}`}>
-          <div className='bg-white rounded-lg shadow-lg max-w-md w-full'>
-            <h2 className='text-xl font-bold bg-slate-200 rounded-t-lg p-4' style={{ boxShadow: "inset 0 -1px 0 0 #c9c7c7" }}>Cookies Settings</h2>
-            <p className='p-4'>You can choose which cookies you want to allow:</p>
-            <div className='flex flex-col gap-2 px-4'>
-              <label className='flex items-center'>
-                <input type='checkbox' className='mr-2' />
-                Functional Cookies
-              </label>
-              <label className='flex items-center'>
-                <input type='checkbox' className='mr-2' />
-                Analytical Cookies
-              </label>
-              <label className='flex items-center'>
-                <input type='checkbox' className='mr-2' />
-                Marketing Cookies
-              </label>
-            </div>
+          <div className='bg-white rounded-3xl shadow-lg max-w-md w-full relative'>
+            <h2 className='text-xl font-bold bg-gray-200 rounded-t-3xl p-4' style={{ boxShadow: "inset 0 -1px 0 0 #c9c7c7" }}>
+              Cookies Settings
+            </h2>
+            <button className='flex justify-center items-center  text-slate-500 cursor-pointer rounded-full absolute right-4 top-3 w-7 h-7 text-center hover:bg-slate-400'>
+              <HighlightOff onClick={() => setSettingsOpened(!settingsOpened)} fontSize="large" />
+            </button>
+
+            <ListItemButton sx={{ backgroundColor: '#ededed' }} onClick={handleClick}>
+              <ListItemIcon>
+              </ListItemIcon>
+              <ListItemText primary="Essential cookies" />
+              {open ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemText primary="These cookies are necessary for the proper functioning of our website and cannot be disabled in our system" />
+                </ListItemButton>
+              </List>
+            </Collapse>
+            <ListItemButton sx={{ backgroundColor: '#ededed' }} onClick={handleClick2}>
+              <ListItemIcon>
+              </ListItemIcon>
+              <ListItemText primary="Optional cookies" />
+              {open2 ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={open2} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <div className='flex flex-col gap-2 px-4'>
+                  <p className='p-4'>Choose which cookies you want to allow</p>
+                    <label className='flex items-center'>
+                      <input type='checkbox' className='mr-2' />
+                      Functional Cookies
+                    </label>
+                    <label className='flex items-center'>
+                      <input type='checkbox' className='mr-2' />
+                      Analytical Cookies
+                    </label>
+                    <label className='flex items-center'>
+                      <input type='checkbox' className='mr-2' />
+                      Marketing Cookies
+                    </label>
+                  </div>
+
+                </ListItemButton>
+              </List>
+            </Collapse>
+
+
             <button onClick={() => { setSettingsOpened(!settingsOpened); setCookiesAccepted(!cookiesAccepted) }} className="m-6 bg-black text-white tracking-tighter font-bold pb-3 pt-2 px-4 rounded-full">
               Save Settings
             </button>
