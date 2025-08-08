@@ -74,9 +74,9 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
       {/* CARDS */}
       <div className="text-3xl font-bold mt-40" id="portfolio">Portfolio</div>
       <div className="text-xl text-blue-900">28+ projects realized</div>
-      <div className="grid lg:grid-cols-3 grid-cols-2 justify-between gap-4 p-4 rounded-lg mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 p-4 rounded-lg mt-4">
         {slides.map((slide, index) => (
-          <div key={index} className="relative flex flex-col items-center rounded-xl border border-slate-300">
+          <div key={index} className="relative flex flex-col items-center rounded-xl border border-slate-300 bg-gradient-to-b from-pink-200">
 
             <a href={slide.url} target="_blank">
               <Image src={slide.img} alt='' width={0} height={0} sizes="50w" style={{ width: 'auto', height: 'auto' }} className="rounded-t-lg" />
@@ -84,13 +84,13 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 
             <div className="p-5 flex flex-col gap-8 justify-between items-center border-t border-slate-300">
               <a href="#" className="flex">
-                <div className="flex text-sm sm:text-xl lg:text-xl font-medium tracking-tight text-gray-900 h-64 md:min-h-48">
+                <div className="flex text-sm sm:text-xl lg:text-xl font-medium tracking-tight text-gray-900 md:min-h-48">
                   <span className="">{slide.description}</span>
                 </div>
               </a>
             </div>
             <a href={slide.url} target="_blank"
-              className="absolute bottom-2 mx-10 px-3 py-1 text-sm font-medium text-center align-bottom text-violet-800 hover:bg-violet-100 rounded focus:outline- border border-violet-800">
+              className="mb-2 px-3 py-1 text-sm font-medium text-center align-bottom text-violet-800 hover:bg-violet-100 rounded focus:outline- border border-violet-800">
               <span>DEMO</span>
             </a>
 
