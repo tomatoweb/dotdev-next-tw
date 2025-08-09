@@ -8,43 +8,43 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ play, pauseOnHover }) => (
-    <Marquee play={play} pauseOnHover={pauseOnHover} className="overflow-x-visible">
-        <div className='flex justify-center items-center mx-3'>
-            <Image alt='' className="" src={"/laravel.png"} width={120} height={120} />
+    <Marquee play={true} pauseOnHover={pauseOnHover} className="overflow-x-visible -mt-5">
+        <div className='flex justify-center items-center mx-2'>
+            <Image alt='' className="w-auto h-6 sm:h-10" src={"/laravel.png"} width={100} height={100} />
         </div>
         <div className='flex justify-center items-center mx-2'>
-            <Image alt='' className="" src={"/mobile.png"} width={22} height={22} />
-            <span className="ml-2 text-[#5856e5] text-lg">Mobile Optimized</span>
+            <Image alt='' className="w-auto h-5 sm:h-10" src={"/mobile.png"} width={100} height={100} />
+            <span className="ml-1 text-[#5856e5]">Mobile Optimized</span>
         </div>
         <div className='flex justify-center items-center ml-2'>
-            <Image alt='' className="" src={"/react-full.png"} width={110} height={110} />
+            <Image alt='' className="w-auto h-6 sm:h-10" src={"/react-full.png"} width={100} height={100} />
         </div>
         <div className='flex justify-center items-center mx-2'>
-            <Image alt='' className="" src={"/symfony.svg"} width={45} height={45} />
-            <Image alt='' className="" src={"/symfonytxt.png"} width={85} height={85} />
+            <Image alt='' className="w-auto h-5 sm:h-10" src={"/symfony.png"} width={100} height={100} />
+            <Image alt='' className="w-auto h-4 sm:h-5 ml-1" src={"/symfonytxt.png"} width={100} height={100} />
         </div>
         <div className='flex justify-center items-center mx-2'>
-            <Image alt='' className="" src={"/tailwind.png"} width={40} height={40} />
-            <span className="text-[#34dbeb] ml-1 text-[22px]">Tailwind</span>
-        </div>
-        <div className='flex justify-center items-center mx-3'>
-            <Image alt='' className="" src={"/code-2.png"} width={32} height={32} />
-            <span className="ml-2 text-[#ecb9c2] text-xl">Components</span>
-        </div>
-        <div className='flex justify-center items-center mx-3'>
-            <Image alt='' className="mb-2" src={"/php.png"} width={48} height={48} />
-            <Image alt='' className="mt-1" src={"/php8.png"} width={65} height={65} />
+            <Image alt='' className="w-auto h-4 sm:h-10" src={"/tailwind.png"} width={100} height={100} />
+            <span className="text-[#34dbeb] ml-1">Tailwind</span>
         </div>
         <div className='flex justify-center items-center mx-2'>
-            <Image alt='' className="" src={"/responsive.png"} width={50} height={50} />
-            <span className="ml-1 text-[#56b2c0] text-xl">Responsive</span>
+            <Image alt='' className="w-auto h-5 sm:h-10" src={"/code-2.png"} width={100} height={100} />
+            <span className="ml-1 text-[#ecb9c2]">Components</span>
         </div>
         <div className='flex justify-center items-center mx-2'>
-            <Image alt='' className="" src={"/next.png"} width={110} height={110} />
+            <Image alt='' className="w-auto h-5 sm:h-10" src={"/php.png"} width={100} height={100} />
+            <Image alt='' className="w-auto h-8 sm:h-10 mt-1" src={"/php8.png"} width={100} height={100} />
         </div>
         <div className='flex justify-center items-center mx-2'>
-            <Image alt='' className="" src={"/icon-13.png"} width={42} height={42} />
-            <span className="ml-2 text-[#d19aa1] text-lg">Modern Design</span>
+            <Image alt='' className="w-auto h-5 sm:h-10" src={"/responsive.png"} width={100} height={100} />
+            <span className="ml-1 text-[#56b2c0]">Responsive</span>
+        </div>
+        <div className='flex justify-center items-center mx-2'>
+            <Image alt='' className="w-auto h-3 sm:h-5" src={"/next.png"} width={100} height={100} />
+        </div>
+        <div className='flex justify-center items-center mx-2'>
+            <Image alt='' className="w-auto h-5 sm:h-10" src={"/icon-13.png"} width={100} height={100} />
+            <span className="ml-1 text-[#d19aa1]">Modern Design</span>
         </div>
     </Marquee>
 );

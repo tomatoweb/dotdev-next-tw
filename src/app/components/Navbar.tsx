@@ -11,7 +11,9 @@ const Navbar = () => {
             <Link className="-mt-6 mr-2 -ml-6" href="/">
                 <Image alt="" src="/mathias.png" width={100} height={100} />
             </Link>
-            <Marquee play={true} pauseOnHover={true} />
+						<div className="w-3/4 sm:w-[89%]">
+            	<Marquee play={true} pauseOnHover={true} />
+						</div>
             {/* <div className="grid grid-cols-4 md:grid-cols-8 gap-2 lg:gap-6" style={{ zIndex: 10 }}>
                 {slides.map((slide) => (
                     <Link key={slide.id} className="flex flex-col items-center" href={slide.url} target="_blank">
