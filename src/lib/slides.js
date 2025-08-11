@@ -41,7 +41,7 @@ export const slides = [
 	},
 	{
 		id: 4,
-		type: "Rect App",
+		type: "React App",
 		title: "Social with Native React",
 		img: "/social-react-mui.png",
 		imgsmall: "/social-react-small.png",
