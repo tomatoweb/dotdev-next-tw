@@ -13,7 +13,9 @@ const config: Config = {
         mono: ["var(--font-geist-mono)"],
       },
       colors: {
-        'primary': '#5956e9',
+        'primary': '#7367F2',
+        'primary-dark': '#675cd9',
+        'primary-light': '#8f85f4',
         'white': '#ffffff',
         'purple': '#3f3cbb',
         'midnight': '#121063',

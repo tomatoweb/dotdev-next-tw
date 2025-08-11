@@ -11,12 +11,12 @@ const Footer = () => {
     return (
 
         <div className="bg-[#27272e] relative">
-            <div className='max-w-[70%] m-auto'>
-                <div className='flex flex-col md:flex-row justify-evenly gap-10 pt-20'>
-                    <div className='text-white text-[50px] font-[400] tracking-tighter leading-snug mb-8'>
+            <div className='max-w-[80%] m-auto'>
+                <div className='flex flex-col gap-4 pt-10'>
+                    <div className='text-white text-xl text-center font-[500] tracking-tighter mb-2'>
                         <div >Modern Impressive technologies</div>
                     </div>
-                    <div className='text-white text-[25px] font-[600] tracking-tighter text-center leading-snug'>
+                    <div className='text-white text-xl font-[400] tracking-tighter text-center leading-snug'>
                         <div >Discover the amazing features in self-made Apps and Templates</div>
                     </div>
                 </div>
