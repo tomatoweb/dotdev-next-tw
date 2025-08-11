@@ -75,17 +75,14 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 			{/* CARDS */}
 			<div className="text-3xl font-bold mt-20 text-primary-dark" id="portfolio">Portfolio</div>
 			<div className="text-xl text-primary-dark">28+ projects realized</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-8 rounded-lg mt-4">
-
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-8 mt-4">
 				{slides.map((slide, index) => (
-
-					<div key={index} className="relative flex flex-col items-center justify-start rounded-xl border border-slate-300 bg-gradient-to-b from-primary-light">
-						
+					<div key={index} className="relative flex flex-col items-center justify-start border  rounded-md border-slate-300 bg-gradient-to-b from-primary-light">						
 						<div className="relative flex flex-col items-center justify-end">
 							<div className="w-full">
 								<a href={slide.url} target="_blank">
 									<Image
-										className=""
+										className=" rounded-t-md"
 										src={slide.img}
 										width={0}
 										height={0}
@@ -113,7 +110,6 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 					</div>
 				))}
 			</div>
-
 			<div className="flex flex-col justify-center items-center gap-6 text-xl mx-8 my-8 font-bold text-slate-900 animate-pulse">
 				Find out more...
 			</div>
