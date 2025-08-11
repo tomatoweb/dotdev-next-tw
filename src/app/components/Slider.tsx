@@ -5,6 +5,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import ContactForm from "./ContactForm";
 import { slides } from "@/lib/slides";
+import Mouse from '@mui/icons-material/Mouse';
 
 const Slider = ({ children }: { children: React.ReactNode }) => {
 
@@ -63,10 +64,10 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       {/* MOUSE GO TO NEXT ANIMATION */}
-      <div className="relative my-20">
+      <div className="relative mt-8 mb-20">
         <p className="absolute flex justify-center left-0 right-0">
           <a href="#portfolio" className="bounce">
-            <Image src="/go-to-next.png" alt="discover" width={30} height={30} />
+            <Mouse fontSize="large" className="text-violet-500"/>
           </a>
         </p>
       </div>
@@ -76,8 +77,11 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
       <div className="text-xl text-blue-900">28+ projects realized</div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 p-4 rounded-lg mt-4">
         {slides.map((slide, index) => (
-          <div key={index} className="relative flex flex-col items-center rounded-xl border border-slate-300 bg-gradient-to-b from-pink-200">
-
+          <div key={index} className="relative flex flex-col items-center rounded-xl border border-slate-300 bg-gradient-to-b from-pink-100">
+						<div className="my-3 flex justify-between gap-4">
+							{slide.type}
+              <Image alt='' className="items-center justify-center" src={slide.icon || '/default-icon.png'} width={28} height={28} />							 
+						</div>
             <a href={slide.url} target="_blank">
               <Image src={slide.img} alt='' width={0} height={0} sizes="50w" style={{ width: 'auto', height: 'auto' }} className="rounded-t-lg" />
             </a>
