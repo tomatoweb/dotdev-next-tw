@@ -17,7 +17,7 @@ export const slides = [
 		imgsmall: "/doc-next-small.png",
 		url: "https://doc.dotdev.be",
 		icon: "/nextjs.svg",
-		description: "Next.js application with Tailwind CSS and MUI Material for documentation purposes. Includes search functionality",
+		description: "Next.js Wiki application with Tailwind CSS and MUI Material for documentation purposes. Includes search functionality",
 	},
 	{
 		id: 3,
@@ -62,12 +62,12 @@ export const slides = [
 	{
 		id: 9,
 		type: "Vue.js App",
-		title: "Vue.js PHP",
-		img: "/phishing.png",
-		imgsmall: "/phishing.png",
-		url: "https://dotdev.be",
+		title: "Vue.js Quasar",
+		img: "/vue-quasar-page.png",
+		imgsmall: "/vue-quasar-page.png",
+		url: "https://vue.mathiasappelmans.be/form",
 		icon: "/vue.svg",
-		description: "Vue.js form with API PHP backend to handle phishing detection. Includes form validation and API integration",
+		description: "Vue.js Quasar app with API PHP backend to handle phishing detection. Includes form validation and API integration",
 	},
 	{
 		id: 6,
