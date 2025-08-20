@@ -9,12 +9,12 @@ import { setCookie } from '@/actions/actions';
 const CookiesBar = (props : any) => {
 
 	const { cookies } = props
-  const [cookiesShow, setCookiesShow] = useState(true);
+  const [cookiesShow, setCookiesShow] = useState(!cookies);
   const [settingsOpened, setSettingsOpened] = useState(false);
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
 	console.log(!cookies || cookiesShow)
-
+	
   const handleClick = () => {
     setOpen(!open);
   };
@@ -84,7 +84,7 @@ const CookiesBar = (props : any) => {
         </div>
       )}
       {/* Cookies Bar */}			
-      <div className={`${((!cookies && cookiesShow) || cookiesShow) ? 'bottom-20' : '-bottom-[19rem]'} bg-gray-100 fixed left-5 h-auto z-50 items-center rounded-2xl flex flex-col justify-center text-2xl font-bold cursor-pointer transition-all delay-75 duration-1000 shadow-[rgba(0,0,15,0.5)_0px_0px_14px_14px]`}>
+      <div className={`${ cookiesShow ? 'bottom-20' : '-bottom-[19rem]'} bg-gray-100 fixed left-5 h-auto z-50 items-center rounded-2xl flex flex-col justify-center text-2xl font-bold cursor-pointer transition-all delay-75 duration-1000 shadow-[rgba(0,0,15,0.5)_0px_0px_14px_14px]`}>
         <div
           className='h-[80px] w-[300px] bg-cover bg-center bg-no-repeat rounded-t-2xl '
           style={{ backgroundImage: `url(/cookies.jpg)` }}
