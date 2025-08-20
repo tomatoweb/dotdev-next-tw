@@ -1,5 +1,5 @@
 "use server";
-import { headers } from 'next/headers'
+import { cookies } from 'next/headers'
 
 import prisma from "@/lib/db";
 import { revalidatePath } from "next/cache";
@@ -21,4 +21,12 @@ export async function createPost(formData: FormData) {
 export async function geomarkers() {
   await prisma.geomarker.findMany();
   revalidatePath('/posts');
+}
+
+// set user accept cookies
+export async function setCookie(data : { name: string; value: string }) {
+	const cookieStore = await cookies()
+	if(!cookieStore.get(data.name)) {
+		cookieStore.set(data.name, data.value);
+	}	
 }

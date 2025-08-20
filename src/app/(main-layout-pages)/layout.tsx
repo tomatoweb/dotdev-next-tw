@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Ipinfo from "../components/Ipinfo";
 import CookiesBar from "../components/CookiesBar";
+import { getUserAcceptCookie } from '@/utils/serverHelpers'
 
 const roboto = DM_Sans({
   weight: ['400', '500', '600', '700', '800'],
@@ -25,15 +26,18 @@ export const metadata: Metadata = {
   description: "Mathias Appelmans Web developer React PHP",
 };
 
-export default function RootLayout({
+async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+	const cookies = await getUserAcceptCookie()
+
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <CookiesBar />
+        <CookiesBar cookies={cookies} />
         <div className="2xl:py-10 pt-9 ease-in duration-300">
           <div className="px-4 m-auto xl:max-w-[1240px] 2xl:max-w-[1320px]">
             <Navbar />
@@ -48,3 +52,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout

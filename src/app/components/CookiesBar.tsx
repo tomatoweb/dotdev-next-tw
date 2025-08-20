@@ -3,14 +3,17 @@ import Cookies from '@/app/svg/Cookies'
 import { useState } from 'react';
 import HighlightOff from '@mui/icons-material/HighlightOff';
 import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { ExpandLess, ExpandMore, StarBorder } from '@mui/icons-material';
+import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import { setCookie } from '@/actions/actions';
 
-const CookiesBar = () => {
+const CookiesBar = (props : any) => {
 
-  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+	const { cookies } = props
+  const [cookiesShow, setCookiesShow] = useState(true);
   const [settingsOpened, setSettingsOpened] = useState(false);
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
+	console.log(!cookies || cookiesShow)
 
   const handleClick = () => {
     setOpen(!open);
@@ -18,12 +21,11 @@ const CookiesBar = () => {
   const handleClick2 = () => {
     setOpen2(!open2);
   };
-
   return (
     <>
       {/* Cookies Params Modal */}
       {settingsOpened && (
-        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[51] flex items-center justify-center transition-all duration-300 ${cookiesAccepted ? 'hidden' : 'flex'}`}>
+        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[51] flex items-center justify-center transition-all duration-300 ${cookiesShow ? 'hidden' : 'flex'}`}>
           <div className='bg-white rounded-3xl shadow-lg max-w-md w-full relative'>
             <h2 className='text-xl font-bold bg-gray-200 rounded-t-3xl p-4' style={{ boxShadow: "inset 0 -1px 0 0 #c9c7c7" }}>
               Cookies Settings
@@ -75,14 +77,14 @@ const CookiesBar = () => {
             </Collapse>
 
 
-            <button onClick={() => { setSettingsOpened(!settingsOpened); setCookiesAccepted(!cookiesAccepted) }} className="m-6 bg-black text-white tracking-tighter font-bold pb-3 pt-2 px-4 rounded-full">
+            <button onClick={() => { setSettingsOpened(!settingsOpened); setCookiesShow(!cookiesShow) }} className="m-6 bg-black text-white tracking-tighter font-bold pb-3 pt-2 px-4 rounded-full">
               Save Settings
             </button>
           </div>
         </div>
       )}
-      {/* Cookies Bar */}
-      <div className={`bg-gray-100 fixed left-5 h-auto z-50 items-center rounded-2xl flex flex-col justify-center text-2xl font-bold cursor-pointer transition-all delay-75 duration-1000 shadow-[rgba(0,0,15,0.5)_0px_0px_14px_14px] ${!cookiesAccepted ? 'bottom-20' : '-bottom-[19rem]'}`}>
+      {/* Cookies Bar */}			
+      <div className={`${((!cookies && cookiesShow) || cookiesShow) ? 'bottom-20' : '-bottom-[19rem]'} bg-gray-100 fixed left-5 h-auto z-50 items-center rounded-2xl flex flex-col justify-center text-2xl font-bold cursor-pointer transition-all delay-75 duration-1000 shadow-[rgba(0,0,15,0.5)_0px_0px_14px_14px]`}>
         <div
           className='h-[80px] w-[300px] bg-cover bg-center bg-no-repeat rounded-t-2xl '
           style={{ backgroundImage: `url(/cookies.jpg)` }}
@@ -100,9 +102,16 @@ const CookiesBar = () => {
               Vous pouvez choisir les cookies que vous souhaitez autoriser et revenir sur vos choix à tout moment.
             </div>
             <div className='flex justify-left gap-4 my-4 text-sm '>
-              <button onClick={() => setCookiesAccepted(!cookiesAccepted)} className="bg-black text-white tracking-tighter font-bold pb-3 pt-2 px-4 rounded-full">
-                Accept
-              </button>
+							<form
+								 action={ async () => {
+									 await setCookie({name: 'accept-cookie', value: "true"})
+									 
+								 }}
+							>
+								<button onClick={() => setCookiesShow(!cookiesShow)} className="bg-black text-white tracking-tighter font-bold pb-3 pt-2 px-4 rounded-full">
+									Accept
+								</button>
+							</form>
               <button onClick={() => setSettingsOpened(!settingsOpened)} className=' tracking-tighter underline p-1'>
                 Settings
               </button>
@@ -112,7 +121,7 @@ const CookiesBar = () => {
       </div>
       {/* Cookies Persistent Icon */}
       <div className='fixed bottom-3 left-3 z-50'>
-        <button onClick={() => setCookiesAccepted(!cookiesAccepted)} className="bg-black text-white p-1 rounded-full">
+        <button onClick={() => setCookiesShow(!cookiesShow)} className="bg-black text-white p-1 rounded-full">
           <Cookies />
         </button>
       </div>
