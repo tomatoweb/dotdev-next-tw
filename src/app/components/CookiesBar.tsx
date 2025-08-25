@@ -13,8 +13,8 @@ const CookiesBar = (props : any) => {
   const [settingsOpened, setSettingsOpened] = useState(false);
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
-	console.log(!cookies || cookiesShow)
 	
+	// modal settings options click handlers
   const handleClick = () => {
     setOpen(!open);
   };
@@ -25,7 +25,7 @@ const CookiesBar = (props : any) => {
     <>
       {/* Cookies Params Modal */}
       {settingsOpened && (
-        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[51] flex items-center justify-center transition-all duration-300 ${cookiesShow ? 'hidden' : 'flex'}`}>
+        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-[51] flex items-center justify-center transition-all duration-300}`}>
           <div className='bg-white rounded-3xl shadow-lg max-w-md w-full relative'>
             <h2 className='text-xl font-bold bg-gray-200 rounded-t-3xl p-4' style={{ boxShadow: "inset 0 -1px 0 0 #c9c7c7" }}>
               Cookies Settings

@@ -1,3 +1,5 @@
+// This layout is only used for https://mathiasappelmans.be/geo (React Leaflet)
+
 import type { Metadata } from "next";
 import { DM_Sans, Poppins } from 'next/font/google';
 import "@/app/globals.scss";

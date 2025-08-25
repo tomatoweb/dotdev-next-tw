@@ -26,11 +26,7 @@ export const metadata: Metadata = {
   description: "Mathias Appelmans Web developer React PHP",
 };
 
-async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+async function RootLayout( { children } : Readonly<{children: React.ReactNode;}>) {
 
 	const cookies = await getUserAcceptCookie()
 
