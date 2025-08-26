@@ -106,7 +106,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 						<div className="absolute bottom-0 flex w-full justify-evenly gap-20 my-2">
 							<div>
 								<a href={slide.url} target="_blank"
-									className="px-3 py-2 text-sm font-medium text-center  text-primary hover:bg-primary rounded  border border-primary">
+									className="px-3 py-2 text-sm font-medium text-center  text-primary rounded  border border-primary">
 									<span>DEMO</span>
 								</a>
 							</div>
