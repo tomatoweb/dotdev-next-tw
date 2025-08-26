@@ -6,6 +6,8 @@ import { useDraggable } from "react-use-draggable-scroll";
 import ContactForm from "./ContactForm";
 import { slides } from "@/lib/slides";
 import Mouse from '@mui/icons-material/Mouse';
+import { Link } from "@mui/material";
+import Github from "../svg/Github";
 
 const Slider = ({ children }: { children: React.ReactNode }) => {
 
@@ -77,7 +79,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 			<div className="text-xl text-primary-dark">28+ projects realized</div>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-8 mt-4">
 				{slides.map((slide, index) => (
-					<div key={index} className="relative flex flex-col items-center justify-start border  rounded-md border-slate-400 bg-gradient-to-b from-primary-light">						
+					<div key={index} className="relative flex flex-col items-center justify-start border rounded-md border-slate-400 bg-gradient-to-b from-primary-light">						
 						<div className="relative flex flex-col items-center justify-end">
 							<div className="w-full">
 								<a href={slide.url} target="_blank">
@@ -95,16 +97,30 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 							{slide.type}
 							<Image alt='techno logo' className="items-center justify-center" src={slide.icon || '/default-icon.png'} width={28} height={28} />
 						</div>
-							<div className="p-5 mb-8 border-slate-300">								
+							<div className="p-5 mb-14 border-slate-300">								
 									<div className="flex text-sm sm:text-xl lg:text-xl font-medium tracking-tight text-gray-900">
 										<span className="">{slide.description}</span>
 									</div>								
 							</div>
 						</div>
-						<div className="absolute bottom-1 mb-2">
-							<a href={slide.url} target="_blank"
-								className="my-2 px-3 py-1 text-sm font-medium text-center align-bottom text-primary hover:bg-primary rounded focus:outline- border border-primary">
-								<span>DEMO</span>
+						<div className="absolute bottom-0 flex w-full justify-evenly gap-20 my-2">
+							<div>
+								<a href={slide.url} target="_blank"
+									className="px-3 py-2 text-sm font-medium text-center  text-primary hover:bg-primary rounded  border border-primary">
+									<span>DEMO</span>
+								</a>
+							</div>
+							<a className="bg-[#238636] text-white rounded-lg py-2 px-4 -mt-2"
+								href={slide.gitHubUrl} target="_blank">
+								<div className='flex has-tooltip gap-2'>
+									<span className='tooltip rounded-lg shadow-lg py-2 px-2 -m-24 mr-4 bg-[#238636] text-white text-sm mt-8 '>
+										Source code on GitHub
+									</span>
+									<Github />
+									<span className='text-sm'>
+										GitHub
+									</span>
+								</div>
 							</a>
 						</div>
 					</div>

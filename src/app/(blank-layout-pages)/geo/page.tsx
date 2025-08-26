@@ -14,6 +14,7 @@ import dynamic from 'next/dynamic';
 */
 
 const Home: NextPage = () => {
+	
     const NotSSRMap = dynamic(() => import('@/components/maps'), {
         ssr: false,
         loading: () => (
