@@ -112,10 +112,7 @@ const Slider = ({ children }: { children: React.ReactNode }) => {
 							</div>
 							<a className="bg-[#238636] text-white rounded-lg py-2 px-4 -mt-2"
 								href={slide.gitHubUrl} target="_blank">
-								<div className='flex has-tooltip gap-2'>
-									<span className='tooltip rounded-lg shadow-lg py-2 px-2 -m-24 mr-4 bg-[#238636] text-white text-sm mt-8 '>
-										Source code on GitHub
-									</span>
+								<div className='flex gap-2'>
 									<Github />
 									<span className='text-sm'>
 										GitHub
