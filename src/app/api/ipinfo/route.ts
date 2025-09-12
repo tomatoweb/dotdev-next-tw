@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     const date = new Date();
 
-    let visitDate = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes()
+    let visitDate = date.getDate() + '-' + (date.getMonth() + 1 ) + '-' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes()
 
     let data = visitDate + " - " + body.ip + " - " + body.country + " - " + body.city + " - " + body.postal + " - " + body.region + " - " + body.hostname + "\n";
 

@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     const date = new Date();
 
-    let messageDate = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes()
+    let messageDate = date.getDate() + '-' + (date.getMonth() + 1 ) + '-' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes()
 
     let data = messageDate + " - " + body.email + " - " + body.subject + " - " + body.message + "\n";
 

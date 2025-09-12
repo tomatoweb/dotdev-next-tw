@@ -23,6 +23,7 @@ const poppins = Poppins({
     subsets: ['latin'],
 });
 
+// https://nextjs.org/docs/app/getting-started/metadata-and-og-images
 export const metadata: Metadata = {
     title: "Mathias Appelmans mathiasappelmans.be",
     description: "Mathias Appelmans Web developer React PHP",
