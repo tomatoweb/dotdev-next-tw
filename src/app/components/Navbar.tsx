@@ -10,34 +10,37 @@ const Navbar = () => {
 	const ref = useRef<HTMLDivElement>(null);
 
 	// close CV pdf link on click outside 
-  useEffect(() => {
-    const handleOutSideClick = (event: any) => {
-      if (!ref.current?.contains(event.target)) {
-        setOpen(false)
-      }
-    };
+	useEffect(() => {
+		const handleOutSideClick = (event: any) => {
+			if (!ref.current?.contains(event.target)) {
+				setOpen(false)
+			}
+		};
 
-    window.addEventListener("mousedown", handleOutSideClick);
+		window.addEventListener("mousedown", handleOutSideClick);
 
-    return () => {
-      window.removeEventListener("mousedown", handleOutSideClick);
-    };
-  }, [ref]);
+		return () => {
+			window.removeEventListener("mousedown", handleOutSideClick);
+		};
+	}, [ref]);
 
 	const [open, setOpen] = useState(false);
 
 	return (
-		<div ref={ref}  className="relative flex justify-between" >
-			<button onClick={() => setOpen(!open)} className="-mt-6 mr-2 -ml-6">
-				<Image  alt="" src="/mathias.png" width={100} height={100} />
-			</button>
-			{ open &&	(
-				<Link href="/Mathias_Appelmans_2025.pdf" className="flex flex-col absolute top-12 left-3 items-center gap-2 bg-opacity-10 bg-slate-800 px-2 pt-1 rounded" target="_blank">
-					<div className="text-xs">CV</div>	
-					<Image alt='' className="mb-3" src={"/pdf.svg"} width={30} height={30} />
-				</Link>
-			)}
-			
+		<div ref={ref} className="flex justify-between" >
+
+			<div className="flex flex-col -mt-6 mr-2 -ml-6">
+				<button onClick={() => setOpen(!open)}>
+					<Image alt="" src="/mathias.png" width={100} height={100} />
+				</button>
+				{open && (
+					<Link href="/Mathias_Appelmans_2025.pdf" className="flex flex-col justify-center items-center gap-2 ml-9 mr-4 bg-opacity-10 bg-slate-800 px-2 pt-1 rounded" target="_blank">
+						<div className="text-xs">CV</div>
+						<Image alt='' className="mb-3" src={"/pdf.svg"} width={30} height={30} />
+					</Link>
+				)}
+			</div>
+
 			<div className="w-3/4 sm:w-[89%]">
 				<Marquee play={true} pauseOnHover={true} />
 			</div>
