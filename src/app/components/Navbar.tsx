@@ -29,14 +29,14 @@ const Navbar = () => {
 	return (
 		<div ref={ref} className="flex justify-between" >
 
-			<div className="flex flex-col -mt-6 mr-2 -ml-6">
+			<div className="relative flex flex-col -mt-6 mr-2 -ml-6">
 				<button onClick={() => setOpen(!open)}>
 					<Image alt="" src="/mathias.png" width={100} height={100} />
 				</button>
 				{open && (
-					<Link href="/Mathias_Appelmans_2025.pdf" className="flex flex-col justify-center items-center gap-2 ml-9 mr-4 bg-opacity-10 bg-slate-800 px-2 pt-1 rounded" target="_blank">
-						<div className="text-xs">CV</div>
-						<Image alt='' className="mb-3" src={"/pdf.svg"} width={30} height={30} />
+					<Link href="/Mathias_Appelmans_2025.pdf" className="absolute z-50 top-10 sm:top-16 w-10 ml-3 sm:ml-8 sm:p-2 flex flex-col justify-center items-center gap-1 bg-opacity-20 bg-slate-900 px-2 py-1 rounded" target="_blank">
+						<div className="text-xs">CV</div>						
+							<Image alt='' src={"/pdf.svg"} width={30} height={30} />						
 					</Link>
 				)}
 			</div>
