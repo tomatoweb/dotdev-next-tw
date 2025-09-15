@@ -32,7 +32,7 @@ const Navbar = () => {
 				<Image  alt="" src="/mathias.png" width={100} height={100} />
 			</button>
 			{ open &&	(
-				<Link href="/mathias_appelmans_2025.pdf" className="flex flex-col absolute top-20 left-7 items-center gap-2 bg-opacity-10 bg-slate-800 px-2 pt-1 rounded" target="_blank">
+				<Link href="/Mathias_Appelmans_2025.pdf" className="flex flex-col absolute top-20 left-7 items-center gap-2 bg-opacity-10 bg-slate-800 px-2 pt-1 rounded" target="_blank">
 					<div className="text-xs">CV</div>	
 					<Image alt='' className="mb-3" src={"/pdf.svg"} width={30} height={30} />
 				</Link>
